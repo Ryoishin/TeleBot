@@ -19,9 +19,8 @@ import re
 import pybase64
 import requests
 from PIL import Image
-from validators.url import url
-
 from ryoishin import CMD_HELP, bot
+from validators.url import url
 
 IF_EMOJI = re.compile(
     "["

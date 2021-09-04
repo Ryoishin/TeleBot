@@ -2,11 +2,10 @@
 
 from asyncio import sleep
 
-from telethon.errors import rpcbaseerrors
-
 from ryoishin import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from ryoishin.ryoishinConfig import Var
 from ryoishin.utils import admin_cmd, errors_handler
+from telethon.errors import rpcbaseerrors
 
 BOTLOG_CHATID = Var.PRIVATE_GROUP_ID
 
@@ -15,7 +14,7 @@ BOTLOG_CHATID = Var.PRIVATE_GROUP_ID
 @ryoishin.on(sudo_cmd(allow_sudo=True, pattern="purge"))
 @errors_handler
 async def fastpurger(purg):
-    """ For .purge command, purge all messages starting from the reply. """
+    """For .purge command, purge all messages starting from the reply."""
     chat = await purg.get_input_chat()
     msgs = []
     count = 0
@@ -46,7 +45,7 @@ async def fastpurger(purg):
 @ryoishin.on(admin_cmd(outgoing=True, pattern="purgeme"))
 @errors_handler
 async def purgeme(delme):
-    """ For .purgeme, delete x count of your latest message."""
+    """For .purgeme, delete x count of your latest message."""
     message = delme.text
     count = int(message[9:])
     i = 1
@@ -73,7 +72,7 @@ async def purgeme(delme):
 @ryoishin.on(admin_cmd(outgoing=True, pattern="del"))
 @errors_handler
 async def delete_it(delme):
-    """ For .del command, delete the replied message. """
+    """For .del command, delete the replied message."""
     msg_src = await delme.get_reply_message()
     if delme.reply_to_msg_id:
         try:
@@ -93,7 +92,7 @@ async def delete_it(delme):
 @ryoishin.on(admin_cmd(outgoing=True, pattern="edit"))
 @errors_handler
 async def editer(edit):
-    """ For .editme command, edit your last message. """
+    """For .editme command, edit your last message."""
     message = edit.text
     chat = await edit.get_input_chat()
     self_id = await edit.client.get_peer_id("me")
@@ -114,7 +113,7 @@ async def editer(edit):
 @ryoishin.on(admin_cmd(outgoing=True, pattern="sd"))
 @errors_handler
 async def selfdestruct(destroy):
-    """ For .sd command, make seflf-destructable messages. """
+    """For .sd command, make seflf-destructable messages."""
     message = destroy.text
     counter = int(message[4:6])
     text = str(destroy.text[6:])

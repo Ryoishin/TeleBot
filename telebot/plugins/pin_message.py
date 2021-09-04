@@ -1,9 +1,8 @@
 """Pins the replied message
 Syntax: .cpin [LOUD]"""
-from telethon.tl import functions
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl import functions
 
 
 @ryoishin.on(admin_cmd(pattern="cpin ?(.*)"))

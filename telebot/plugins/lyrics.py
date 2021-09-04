@@ -5,10 +5,9 @@ import io
 import os
 
 import lyricsgenius
-from tswift import Song
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from tswift import Song
 
 GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 

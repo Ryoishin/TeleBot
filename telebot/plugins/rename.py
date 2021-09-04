@@ -7,10 +7,9 @@ import os
 import time
 from datetime import datetime
 
-from uniborg.util import admin_cmd
-
 from ryoishin import CMD_HELP
 from ryoishin.ryoishinConfig import Config
+from uniborg.util import admin_cmd
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 

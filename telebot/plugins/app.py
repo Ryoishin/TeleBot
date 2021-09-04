@@ -6,7 +6,6 @@ Fetch App Details from Playstore.
 
 import bs4
 import requests
-
 from ryoishin import CMD_HELP
 
 

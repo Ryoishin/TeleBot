@@ -1,7 +1,6 @@
 """CoronaVirus LookUp
 Syntax: .coronavirus <country>"""
 from covid import Covid
-
 from ryoishin import CMD_HELP
 
 

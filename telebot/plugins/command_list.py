@@ -3,7 +3,6 @@
 import asyncio
 
 import requests
-
 from ryoishin import CMD_HELP
 
 

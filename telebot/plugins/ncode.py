@@ -9,7 +9,6 @@ import os
 import pygments
 from pygments.formatters import ImageFormatter
 from pygments.lexers import Python3Lexer
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd, sudo_cmd
 

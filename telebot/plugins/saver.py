@@ -19,11 +19,10 @@ import os
 import sys
 from asyncio import sleep
 
-from telethon import events
-
 from ryoishin import CMD_HELP
 from ryoishin.ryoishinConfig import Var
 from ryoishin.utils import admin_cmd
+from telethon import events
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.WARN
@@ -38,7 +37,7 @@ BOTLOG_CHATID = Var.PRIVATE_GROUP_ID
 @ryoishin.on(admin_cmd(outgoing=True, pattern=r"save(?: |$)([\s\S]*)"))
 @ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"save(?: |$)([\s\S]*)"))
 async def log(log_text):
-    """ For .log command, forwards a message or the command argument to the bot logs group """
+    """For .log command, forwards a message or the command argument to the bot logs group"""
     if BOTLOG:
         if log_text.reply_to_msg_id:
             reply_msg = await log_text.get_reply_message()

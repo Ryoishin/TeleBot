@@ -6,7 +6,6 @@ from io import BytesIO
 
 import requests
 from PIL import Image
-
 from ryoishin import ALIVE_NAME, CMD_HELP, telever
 from ryoishin.__init__ import StartTime
 from ryoishin.ryoishinConfig import Config, Var

@@ -9,10 +9,9 @@ import os
 import shutil
 from re import findall
 
-from uniborg.util import admin_cmd
-
 from ryoishin import CMD_HELP
 from ryoishin.google_images_download import googleimagesdownload
+from uniborg.util import admin_cmd
 
 
 @ryoishin.on(admin_cmd(pattern="img ?(.*)"))

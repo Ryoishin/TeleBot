@@ -24,12 +24,11 @@ import asyncio
 import os
 from datetime import datetime
 
+from ryoishin import CMD_HELP
+from ryoishin.ryoishinConfig import Config, Var
 from telegraph import Telegraph, upload_file
 from telethon import Button, events
 from telethon.tl import functions, types
-
-from ryoishin import CMD_HELP
-from ryoishin.ryoishinConfig import Config, Var
 
 # --=============================================--#
 global USER_AFK  # pylint:disable=E0602

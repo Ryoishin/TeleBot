@@ -18,12 +18,11 @@ import asyncio
 import io
 import os
 
-from telethon import events, functions
-from telethon.tl.functions.users import GetFullUserRequest
-
 import ryoishin.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from ryoishin import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT, bot
 from ryoishin.utils import admin_cmd
+from telethon import events, functions
+from telethon.tl.functions.users import GetFullUserRequest
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (

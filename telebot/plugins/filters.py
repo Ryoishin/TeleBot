@@ -9,9 +9,6 @@ Available Commands:
 import asyncio
 import re
 
-from telethon import utils
-from telethon.tl import types
-
 from ryoishin import CMD_HELP
 from ryoishin.plugins.sql_helper.filter_sql import (
     add_filter,
@@ -20,6 +17,8 @@ from ryoishin.plugins.sql_helper.filter_sql import (
     remove_filter,
 )
 from ryoishin.utils import admin_cmd
+from telethon import utils
+from telethon.tl import types
 
 DELETE_TIMEOUT = 0
 TYPE_TEXT = 0

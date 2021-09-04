@@ -9,9 +9,8 @@ from datetime import datetime
 
 import barcode
 from barcode.writer import ImageWriter
-from uniborg.util import admin_cmd
-
 from ryoishin import CMD_HELP
+from uniborg.util import admin_cmd
 
 
 @ryoishin.on(admin_cmd(pattern="barcode ?(.*)"))

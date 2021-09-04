@@ -2,9 +2,6 @@
 
 import asyncio
 
-from telethon.tl.types import InputMediaUploadedPhoto
-from uniborg.util import admin_cmd
-
 from ryoishin import CMD_HELP
 from ryoishin.plugins.sql_helper.ghdb_sql import (
     add_channel,
@@ -12,6 +9,8 @@ from ryoishin.plugins.sql_helper.ghdb_sql import (
     in_channels,
     rm_channel,
 )
+from telethon.tl.types import InputMediaUploadedPhoto
+from uniborg.util import admin_cmd
 
 logs_id = Var.PRIVATE_GROUP_ID
 

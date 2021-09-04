@@ -12,9 +12,8 @@ Available Commands:
 
 import asyncio
 
-from telethon import events
-
 from ryoishin import CMD_HELP
+from telethon import events
 
 
 @ryoishin.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))

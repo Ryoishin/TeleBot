@@ -2,10 +2,9 @@
 # Made by team cobra with @xditya
 # Retrieves the name history and the username history of the replied user..
 
+from ryoishin import CMD_HELP
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-
-from ryoishin import CMD_HELP
 
 
 @ryoishin.on(admin_cmd(pattern="sg ?(.*)"))

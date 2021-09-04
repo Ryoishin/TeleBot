@@ -18,6 +18,7 @@ delacc - deleted account"""
 import asyncio
 from time import sleep
 
+from ryoishin import CMD_HELP
 from telethon.tl import functions
 from telethon.tl.types import (
     ChannelParticipantsKicked,
@@ -30,8 +31,6 @@ from telethon.tl.types import (
     UserStatusRecently,
 )
 from uniborg.util import admin_cmd
-
-from ryoishin import CMD_HELP
 
 
 @ryoishin.on(admin_cmd(pattern="unbanall ?(.*)"))

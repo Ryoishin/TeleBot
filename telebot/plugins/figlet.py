@@ -1,5 +1,4 @@
 import pyfiglet
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
 

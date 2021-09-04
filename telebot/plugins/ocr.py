@@ -1,7 +1,6 @@
 import os
 
 import requests
-
 from ryoishin import CMD_HELP, OCR_SPACE_API_KEY, TEMP_DOWNLOAD_DIRECTORY, bot
 from ryoishin.utils import admin_cmd
 

@@ -2,9 +2,8 @@
 from datetime import datetime
 
 import requests
-from uniborg.util import admin_cmd
-
 from ryoishin import CMD_HELP
+from uniborg.util import admin_cmd
 
 
 @ryoishin.on(admin_cmd(pattern="currency (.*)"))

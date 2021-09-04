@@ -15,7 +15,6 @@ import urllib
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
-
 from ryoishin import CMD_HELP, bot
 from ryoishin.utils import admin_cmd, errors_handler
 
@@ -28,7 +27,7 @@ opener.addheaders = [("User-agent", useragent)]
 @ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"reverse(?: |)(\d*)"))
 @errors_handler
 async def okgoogle(img):
-    """ For .reverse command, Google search images and stickers. """
+    """For .reverse command, Google search images and stickers."""
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
 

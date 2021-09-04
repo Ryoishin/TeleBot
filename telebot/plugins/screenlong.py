@@ -5,11 +5,10 @@ import io
 import traceback
 from datetime import datetime
 
-from selenium import webdriver
-
 from ryoishin import CMD_HELP
 from ryoishin.ryoishinConfig import Config
 from ryoishin.utils import admin_cmd
+from selenium import webdriver
 
 
 @ryoishin.on(admin_cmd(pattern="screenlong (.*)"))

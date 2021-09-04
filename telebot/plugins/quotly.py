@@ -1,10 +1,9 @@
 """QuotLy: Avaible commands: .qbot
 """
+from ryoishin import CMD_HELP
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from uniborg.util import admin_cmd
-
-from ryoishin import CMD_HELP
 
 
 @ryoishin.on(admin_cmd(pattern="qbot ?(.*)"))

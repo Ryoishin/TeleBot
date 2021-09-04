@@ -2,9 +2,8 @@ import asyncio
 import os
 from asyncio import sleep
 
-from telegraph import Telegraph, upload_file
-
 from ryoishin.ryoishinConfig import Config
+from telegraph import Telegraph, upload_file
 
 from .. import CMD_HELP
 

@@ -12,10 +12,9 @@ import re
 import urllib
 
 import requests
+from ryoishin import CMD_HELP
 from telethon.tl import functions
 from uniborg.util import admin_cmd
-
-from ryoishin import CMD_HELP
 
 COLLECTION_STRING = [
     "star-wars-wallpaper-1080p",

@@ -24,10 +24,9 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 from pySmartDL import SmartDL
+from ryoishin import ALIVE_NAME, CMD_HELP
 from telethon.tl import functions
 from uniborg.util import admin_cmd
-
-from ryoishin import ALIVE_NAME, CMD_HELP
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 

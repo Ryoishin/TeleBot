@@ -10,7 +10,6 @@ import subprocess
 from datetime import datetime
 
 from gtts import gTTS
-
 from ryoishin.utils import admin_cmd
 
 

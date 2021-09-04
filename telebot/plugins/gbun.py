@@ -1,11 +1,10 @@
 # This is a troll indeed ffs *facepalm*
 import asyncio
 
-from telethon.tl.functions.users import GetFullUserRequest
-from telethon.tl.types import ChannelParticipantsAdmins
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl.functions.users import GetFullUserRequest
+from telethon.tl.types import ChannelParticipantsAdmins
 
 
 @ryoishin.on(admin_cmd(pattern="gbun"))

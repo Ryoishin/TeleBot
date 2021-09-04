@@ -8,10 +8,9 @@ credit: lejend @r4v4n4"""
 
 import random
 
-from telethon import functions, types, utils
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon import functions, types, utils
 
 
 def choser(cmd, pack, blacklist=None):

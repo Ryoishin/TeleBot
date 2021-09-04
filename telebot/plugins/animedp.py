@@ -9,9 +9,8 @@ import re
 import urllib
 
 import requests
-from telethon.tl import functions
-
 from ryoishin import CMD_HELP
+from telethon.tl import functions
 
 COLLECTION_STRING = [
     "cute-anime-wallpapers-hd",

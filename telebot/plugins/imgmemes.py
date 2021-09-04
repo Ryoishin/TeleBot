@@ -9,9 +9,8 @@ import re
 import pybase64
 import requests
 from PIL import Image
-from validators.url import url
-
 from ryoishin import CMD_HELP
+from validators.url import url
 
 EMOJI_PATTERN = re.compile(
     "["

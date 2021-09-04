@@ -6,6 +6,9 @@ from asyncio import sleep
 from datetime import datetime
 from os import remove
 
+from ryoishin import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from ryoishin.ryoishinConfig import Var
+from ryoishin.utils import admin_cmd, errors_handler, sudo_cmd
 from telethon.errors import (
     BadRequestError,
     ChatAdminRequiredError,
@@ -26,10 +29,6 @@ from telethon.tl.types import (
     MessageEntityMentionName,
     MessageMediaPhoto,
 )
-
-from ryoishin import BOTLOG, BOTLOG_CHATID, CMD_HELP
-from ryoishin.ryoishinConfig import Var
-from ryoishin.utils import admin_cmd, errors_handler, sudo_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
@@ -81,7 +80,7 @@ BOTLOG_CHATID = Var.PRIVATE_GROUP_ID
 @ryoishin.on(sudo_cmd(outgoing=True, pattern="setgpic", allow_sudo=True))
 @errors_handler
 async def set_group_photo(gpic):
-    """ For .setgpic command, changes the picture of a group """
+    """For .setgpic command, changes the picture of a group"""
     if not gpic.is_group:
         await gpic.eor(event, "`I don't think this is a group.`")
         return
@@ -159,7 +158,7 @@ async def promote(promt):
 @ryoishin.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def demote(dmod):
-    """ For .demote command, demotes the replied/tagged person """
+    """For .demote command, demotes the replied/tagged person"""
     # Admin right check
     chat = await dmod.get_chat()
     admin = chat.admin_rights
@@ -305,7 +304,7 @@ async def _(event):
 @ryoishin.on(admin_cmd(outgoing=True, pattern="admins$"))
 @errors_handler
 async def get_admin(show):
-    """ For .admins command, list all of the admins of the chat. """
+    """For .admins command, list all of the admins of the chat."""
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
     mentions = f"<b>Admins in {title}:</b> \n"
@@ -328,7 +327,7 @@ async def get_admin(show):
 @ryoishin.on(sudo_cmd(outgoing=True, pattern="pin(?: |$)(.*)"))
 @errors_handler
 async def pin(msg):
-    """ For .pin command, pins the replied/tagged message on the top the chat. """
+    """For .pin command, pins the replied/tagged message on the top the chat."""
     # Admin or creator check
     chat = await msg.get_chat()
     admin = chat.admin_rights
@@ -376,7 +375,7 @@ async def pin(msg):
 @ryoishin.on(sudo_cmd(outgoing=True, pattern="kick(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def kick(usr):
-    """ For .kick command, kicks the replied/tagged person from the group. """
+    """For .kick command, kicks the replied/tagged person from the group."""
     # Admin or creator check
     chat = await usr.get_chat()
     admin = chat.admin_rights
@@ -421,7 +420,7 @@ async def kick(usr):
 @ryoishin.on(admin_cmd(outgoing=True, pattern="users ?(.*)"))
 @errors_handler
 async def get_users(show):
-    """ For .users command, list all of the users in a chat. """
+    """For .users command, list all of the users in a chat."""
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
     mentions = "Users in {}: \n".format(title)
@@ -464,7 +463,7 @@ async def get_users(show):
 
 
 async def get_user_from_event(event):
-    """ Get the user from argument or replied message. """
+    """Get the user from argument or replied message."""
     args = event.pattern_match.group(1).split(" ", 1)
     extra = None
     if event.reply_to_msg_id:

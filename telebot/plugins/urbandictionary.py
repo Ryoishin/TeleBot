@@ -4,7 +4,6 @@
 """Urban Dictionary
 Syntax: .ud Query"""
 import asyncurban
-
 from ryoishin.utils import admin_cmd
 
 

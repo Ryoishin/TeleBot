@@ -9,12 +9,11 @@ import random
 from time import sleep
 from urllib.parse import quote_plus
 
+from ryoishin import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN
+from ryoishin.utils import admin_cmd, sudo_cmd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-
-from ryoishin import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN
-from ryoishin.utils import admin_cmd, sudo_cmd
 
 CARBONLANG = "auto"
 LANG = "en"
@@ -25,7 +24,7 @@ LANG = "en"
 async def carbon_api(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
 
-        """ A Wrapper for carbon.now.sh """
+        """A Wrapper for carbon.now.sh"""
         await eor(e, "`Processing..`")
         CARBON = "https://carbon.now.sh/?l={lang}&code={code}"
         global CARBONLANG

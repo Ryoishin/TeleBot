@@ -4,7 +4,6 @@ Available Options: image, file, text"""
 from datetime import datetime
 
 import speedtest
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
 

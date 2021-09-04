@@ -12,6 +12,8 @@ import urllib.request
 from os import remove
 
 from PIL import Image
+from ryoishin import CMD_HELP, bot
+from ryoishin.ryoishinConfig import Var
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.types import (
     DocumentAttributeFilename,
@@ -19,9 +21,6 @@ from telethon.tl.types import (
     InputStickerSetID,
     MessageMediaPhoto,
 )
-
-from ryoishin import CMD_HELP, bot
-from ryoishin.ryoishinConfig import Var
 
 KANGING_STR = [
     "Using Witchery to kang this sticker...",
@@ -42,7 +41,7 @@ telename = Var.CUSTOM_STICKER_PACK_NAME
 @ryoishin.on(admin_cmd(outgoing=True, pattern="kang"))
 @ryoishin.on(sudo_cmd(pattern="kang", allow_sudo=True))
 async def kang(args):
-    """ For .kang command, kangs stickers or creates new ones. """
+    """For .kang command, kangs stickers or creates new ones."""
     user = await bot.get_me()
     if not user.username:
         user.username = user.first_name
@@ -270,7 +269,7 @@ async def kang(args):
 
 
 async def resize_photo(photo):
-    """ Resize the given photo to 512x512 """
+    """Resize the given photo to 512x512"""
     image = Image.open(photo)
     maxsize = (512, 512)
     if (image.width and image.height) < 512:

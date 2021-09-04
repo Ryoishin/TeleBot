@@ -3,11 +3,10 @@ Available Commands: .lock <option>, .unlock <option>, .locks
 API Options: msg, media, sticker, gif, gamee, ainline, gpoll, adduser, cpin, changeinfo
 DB Options: bots, commands, email, forward, url"""
 
-from telethon import events, functions, types
-
 from ryoishin import CMD_HELP
 from ryoishin.plugins.sql_helper.locks_sql import get_locks, is_locked, update_lock
 from ryoishin.utils import admin_cmd
+from telethon import events, functions, types
 
 
 @ryoishin.on(admin_cmd(pattern=r"lock( (?P<target>\S+)|$)"))

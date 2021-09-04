@@ -8,11 +8,10 @@ Available Commands:
 .rmblacklist"""
 import re
 
-from telethon import events
-
 import ryoishin.plugins.sql_helper.blacklist_sql as sql
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon import events
 
 
 @ryoishin.on(events.NewMessage(incoming=True))

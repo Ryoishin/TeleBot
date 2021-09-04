@@ -34,10 +34,9 @@ import io
 from random import randint, uniform
 
 from PIL import Image, ImageEnhance, ImageOps
+from ryoishin import CMD_HELP
 from telethon.tl.types import DocumentAttributeFilename
 from uniborg.util import admin_cmd
-
-from ryoishin import CMD_HELP
 
 
 @ryoishin.on(admin_cmd(pattern="deepfry(?: |$)(.*)", outgoing=True))

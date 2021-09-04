@@ -12,16 +12,15 @@ Available commands:
 from re import findall
 
 import requests
-from search_engine_parser import GoogleSearch
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from search_engine_parser import GoogleSearch
 
 
 @ryoishin.on(admin_cmd(outgoing=True, pattern=r"gs (.*)"))
 @ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"gs (.*)"))
 async def gsearch(q_event):
-    """ For .google command, do a Google search from @RyoishinHelp. """
+    """For .google command, do a Google search from @RyoishinHelp."""
     match = q_event.pattern_match.group(1)
     page = findall(r"page=\d+", match)
     try:

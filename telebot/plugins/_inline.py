@@ -20,12 +20,11 @@ import os
 import re
 from math import ceil
 
-from telethon import Button, custom, events, functions
-from telethon.tl.functions.users import GetFullUserRequest
-
 from ryoishin import ALIVE_NAME, CMD_HELP, CMD_LIST, CUSTOM_PMPERMIT, bot
 from ryoishin.plugins import telestats
 from ryoishin.ryoishinConfig import Var
+from telethon import Button, custom, events, functions
+from telethon.tl.functions.users import GetFullUserRequest
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (
@@ -149,7 +148,8 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     ],
                     [
                         custom.Button.url(
-                            "Updates and Support Group↗️", "https://t.me/RyoishinSupport"
+                            "Updates and Support Group↗️",
+                            "https://t.me/RyoishinSupport",
                         )
                     ],
                 ],

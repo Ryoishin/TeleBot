@@ -9,6 +9,8 @@
 from re import findall, match
 from typing import List, Union
 
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 from telethon.events import NewMessage
 from telethon.tl.custom import Message
 from telethon.tl.functions.channels import GetFullChannelRequest
@@ -21,9 +23,6 @@ from telethon.tl.types import (
     InputPeerChat,
     MessageEntityMentionName,
 )
-
-from ryoishin import CMD_HELP
-from ryoishin.utils import admin_cmd
 
 
 def parse_arguments(message: str, valid: List[str]) -> (dict, str):
@@ -80,7 +79,7 @@ async def get_user_from_id(user, event):
 
 
 async def get_user_from_event(event: NewMessage.Event, **kwargs):
-    """ Get the user from argument or replied message. """
+    """Get the user from argument or replied message."""
     reply_msg: Message = await event.get_reply_message()
     user = kwargs.get("user", None)
 
@@ -290,7 +289,7 @@ class TGDoc:
 @ryoishin.on(admin_cmd(pattern=r"u(?:ser)?(\s+[\S\s]+|$)", outgoing=True))
 @ryoishin.on(sudo_cmd(pattern=r"u(?:ser)?(\s+[\S\s]+|$)", allow_sudo=True))
 async def who(event: NewMessage.Event):
-    """ For .user command, get info about a user. """
+    """For .user command, get info about a user."""
     if event.fwd_from:
         return
 
@@ -319,7 +318,7 @@ async def who(event: NewMessage.Event):
 
 
 async def fetch_info(replied_user, **kwargs):
-    """ Get details from the User object. """
+    """Get details from the User object."""
     user = replied_user.user
 
     id_only = kwargs.get("id", False)

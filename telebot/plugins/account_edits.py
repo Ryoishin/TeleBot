@@ -6,11 +6,10 @@
 
 import os
 
+from ryoishin import CMD_HELP
 from telethon.tl import functions
 from telethon.tl.functions.photos import DeletePhotosRequest, GetUserPhotosRequest
 from telethon.tl.types import InputPhoto
-
-from ryoishin import CMD_HELP
 
 
 @ryoishin.on(admin_cmd(pattern="pbio (.*)"))  # pylint:disable=E0602
@@ -84,7 +83,7 @@ async def _(event):
 
 @ryoishin.on(admin_cmd(pattern="delpfp ?(.*)"))
 async def remove_profilepic(delpfp):
-    """ For .delpfp command, delete your current profile picture in Telegram. """
+    """For .delpfp command, delete your current profile picture in Telegram."""
     group = delpfp.text[8:]
     if group == "all":
         lim = 0

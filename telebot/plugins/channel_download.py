@@ -7,9 +7,8 @@ By: @Zero_cool7870
 import os
 import subprocess
 
-from uniborg.util import admin_cmd
-
 from ryoishin import CMD_HELP
+from uniborg.util import admin_cmd
 
 
 @ryoishin.on(admin_cmd(pattern=r"getc"))

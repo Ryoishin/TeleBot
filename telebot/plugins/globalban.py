@@ -16,12 +16,11 @@
 
 # Imported by @its_xditya
 
+from ryoishin import CMD_HELP, bot
+from ryoishin.utils import admin_cmd
 from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
-
-from ryoishin import CMD_HELP, bot
-from ryoishin.utils import admin_cmd
 
 client = bot
 

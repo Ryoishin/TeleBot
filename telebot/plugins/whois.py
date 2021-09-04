@@ -22,18 +22,17 @@ Get detailed info about any user
 
 import os
 
+from ryoishin import CMD_HELP
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
-
-from ryoishin import CMD_HELP
 
 TMP_DOWNLOAD_DIRECTORY = "./"
 
 
 @ryoishin.on(admin_cmd(pattern="whois(?: |$)(.*)"))
 async def who(event):
-    """ For .whois command, get info about a user. """
+    """For .whois command, get info about a user."""
     if event.fwd_from:
         return
 
@@ -65,7 +64,7 @@ async def who(event):
 
 
 async def get_user(event):
-    """ Get the user from argument or replied message. """
+    """Get the user from argument or replied message."""
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.forward:
@@ -109,7 +108,7 @@ async def get_user(event):
 
 
 async def fetch_info(replied_user, event):
-    """ Get details from the User object. """
+    """Get details from the User object."""
     user_id = replied_user.user.id
     first_name = replied_user.user.first_name
     last_name = replied_user.user.last_name

@@ -1,10 +1,9 @@
 # fix by @heyworld for OUB
 # bug fixed by @d3athwarrior
 
-from telethon.tl.types import InputMediaDice
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl.types import InputMediaDice
 
 
 @ryoishin.on(admin_cmd(outgoing=True, pattern="dice(?: |$)(.*)"))

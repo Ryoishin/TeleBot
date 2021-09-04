@@ -20,6 +20,7 @@ import json
 import os
 
 import pybase64
+from ryoishin import CMD_HELP
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
@@ -34,8 +35,6 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 from youtubesearchpython import SearchVideos
-
-from ryoishin import CMD_HELP
 
 
 @ryoishin.on(admin_cmd(pattern="song (.*)"))

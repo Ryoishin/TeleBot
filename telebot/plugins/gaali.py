@@ -1,7 +1,6 @@
+from ryoishin import CMD_HELP
 from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
-
-from ryoishin import CMD_HELP
 
 
 @ryoishin.on(admin_cmd(pattern="gaali"))

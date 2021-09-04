@@ -7,7 +7,6 @@ import os
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
 

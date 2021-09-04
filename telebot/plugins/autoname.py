@@ -3,11 +3,10 @@
 import asyncio
 import time
 
+from ryoishin import ALIVE_NAME, CMD_HELP
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from uniborg.util import admin_cmd
-
-from ryoishin import ALIVE_NAME, CMD_HELP
 
 DEL_TIME_OUT = 60
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin"

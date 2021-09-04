@@ -9,10 +9,9 @@ import re
 import urllib
 
 import requests
-from telethon.tl import functions
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl import functions
 
 COLLECTION_STRING = [
     "avengers-logo-wallpaper",

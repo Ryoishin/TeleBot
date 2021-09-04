@@ -11,10 +11,9 @@
 
 import time
 
-from telethon.tl.functions.channels import LeaveChannelRequest
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl.functions.channels import LeaveChannelRequest
 
 
 @ryoishin.on(admin_cmd(pattern="bye", outgoing=True))

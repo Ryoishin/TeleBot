@@ -14,11 +14,10 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from telethon.tl.types import Channel
-
 from ryoishin import *
 from ryoishin import ALIVE_NAME, bot, telever
 from ryoishin.ryoishinConfig import Config, Var
+from telethon.tl.types import Channel
 
 # stats
 if Var.PRIVATE_GROUP_ID:

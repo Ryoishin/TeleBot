@@ -1,10 +1,9 @@
 """Invite the user(s) to the current chat
 Syntax: .invite <User(s)>"""
 
-from telethon import functions
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon import functions
 
 
 @ryoishin.on(admin_cmd(pattern="invite ?(.*)"))

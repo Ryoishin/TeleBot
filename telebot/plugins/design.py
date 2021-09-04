@@ -1,8 +1,7 @@
 """.admin Plugin for @UniBorg"""
-from telethon.tl.types import ChannelParticipantsAdmins
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl.types import ChannelParticipantsAdmins
 
 
 @ryoishin.on(admin_cmd(pattern="join"))

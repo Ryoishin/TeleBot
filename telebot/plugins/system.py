@@ -15,7 +15,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin"
 
 @ryoishin.on(admin_cmd(pattern="sysd"))
 async def sysdetails(sysd):
-    """ For .sysd command, get system info using neofetch. """
+    """For .sysd command, get system info using neofetch."""
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
             fetch = await asyncrunapp(
@@ -35,7 +35,7 @@ async def sysdetails(sysd):
 
 @ryoishin.on(admin_cmd(pattern="version"))
 async def bot_ver(event):
-    """ For .botver command, get the bot version. """
+    """For .botver command, get the bot version."""
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         if which("git") is not None:
             ver = await asyncrunapp(
@@ -71,7 +71,7 @@ async def bot_ver(event):
 
 @ryoishin.on(admin_cmd(pattern="pip(?: |$)(.*)"))
 async def pipcheck(pip):
-    """ For .pip command, do a pip search. """
+    """For .pip command, do a pip search."""
     if not pip.text[0].isalpha() and pip.text[0] not in ("/", "#", "@", "!"):
         pipmodule = pip.pattern_match.group(1)
         if pipmodule:

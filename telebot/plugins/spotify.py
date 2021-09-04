@@ -4,11 +4,10 @@ Music scrapper - Scrapps of SMD Database
 # Better now - @its_xditya
 # Based off plugin by @okay_retard && @hellboi_atul
 
+from ryoishin.plugins import OWNER_ID, TELE_NAME
 from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.tl.types import InputMessagesFilterMusic
-
-from ryoishin.plugins import OWNER_ID, TELE_NAME
 
 from . import CMD_HELP
 

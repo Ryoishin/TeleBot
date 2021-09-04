@@ -2,10 +2,9 @@
 #
 # You may not use this plugin without proper authorship and consent from @RyoishinSupport
 #
-from telethon.tl import functions
-
 from ryoishin import ALIVE_NAME, CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl import functions
 
 TELENAME = ALIVE_NAME if ALIVE_NAME else "Ryoishin"
 

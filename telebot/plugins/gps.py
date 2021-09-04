@@ -8,10 +8,9 @@ credits :@mrconfused
 # Plugin for Ryoishin
 
 from geopy.geocoders import Nominatim
-from telethon.tl import types
-
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd
+from telethon.tl import types
 
 
 @ryoishin.on(admin_cmd(pattern="gps ?(.*)"))
