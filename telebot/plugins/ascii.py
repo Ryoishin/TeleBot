@@ -23,7 +23,7 @@ async def _(event):
         await eor(event, "```Reply to actual users message.```")
         return
     await eor(event, "```Wait making ASCII...```")
-    # For TeleBot
+    # For Ryoishin
     async with borg.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -43,7 +43,7 @@ async def _(event):
             await borg.send_file(event.chat_id, response.message.media)
 
 
-# For TeleBot
+# For Ryoishin
 CMD_HELP.update(
     {
         "ascii": "`.ascii` reply to any image file:\

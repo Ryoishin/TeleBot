@@ -1,4 +1,4 @@
-# @TeleBotSupport Keep Credits If You Are Goanna Kang This Lol
+# @RyoishinSupport Keep Credits If You Are Goanna Kang This Lol
 # And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 # Usage .avengersdp Im Not Responsible For Any Ban caused By This
 
@@ -55,7 +55,7 @@ async def animepp():
 async def main(event):
 
     await event.edit(
-        "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. By [TeleBot](https://github.com/xditya/TeleBot)**"
+        "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. By [Ryoishin](https://github.com/xditya/Ryoishin)**"
     )
 
     while True:

@@ -1,4 +1,4 @@
-# For TeleBot
+# For Ryoishin
 # By @AKASH_AM1 and @xditya
 # Kangers keep cr eors
 from telebot import ALIVE_NAME

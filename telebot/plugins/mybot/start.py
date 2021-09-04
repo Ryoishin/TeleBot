@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Ryoishin - UserBot
+#    Copyright (C) 2020 Ryoishin
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -85,7 +85,7 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.url(
-                                          "TeleBot", url="https://github.com/xditya/TeleBot")],
+                                          "Ryoishin", url="https://github.com/xditya/Ryoishin")],
                                       [Button.inline(
                                           "Whats this?", data="telebot")]
                                   ]
@@ -95,7 +95,7 @@ async def start_all(event):
                                      startotherena,
                                      buttons=[
                                          [Button.url(
-                                             "TeleBot", url="https://github.com/xditya/TeleBot")],
+                                             "Ryoishin", url="https://github.com/xditya/Ryoishin")],
                                          [Button.inline(
                                              "Whats this?", data="telebot")]
                                      ]
@@ -117,7 +117,7 @@ async def owner(event):
                                  [Button.inline("Broadcast",
                                                 data="telebroad")],
                                  [Button.url("Support",
-                                             url="https://t.me/TeleBotSupport")]
+                                             url="https://t.me/RyoishinSupport")]
                              ])
 
 
@@ -140,10 +140,10 @@ async def logs(event):
         event.chat_id,
         "logs.txt",
         reply_to=event.id,
-        caption="**Heroku** TeleBot Logs",
+        caption="**Heroku** Ryoishin Logs",
         buttons=[
             [Button.url("View Online", f"{url}")],
-            [Button.url("Crashed?", "t.me/TeleBotHelpChat")]
+            [Button.url("Crashed?", "t.me/RyoishinHelpChat")]
         ])
     await asyncio.sleep(5)
     return os.remove('logs.txt')
@@ -181,10 +181,10 @@ async def settings(event):
 async def settings(event):
     await event.edit("Browse through the available options:",
                      buttons=[
-                         [(Button.url("Repository", url="https://github.com/xditya/TeleBot")),
-                          (Button.url("Deploy", url="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot%2F&template=https%3A%2F%2Fgithub.com%2Fxditya%2FTeleBot"))],
+                         [(Button.url("Repository", url="https://github.com/xditya/Ryoishin")),
+                          (Button.url("Deploy", url="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin%2F&template=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin"))],
                          [Button.url("Support",
-                                     url="https://t.me/TeleBotSupport")]
+                                     url="https://t.me/RyoishinSupport")]
                      ])
 
 

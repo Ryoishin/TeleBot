@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Ryoishin - UserBot
+#    Copyright (C) 2020 Ryoishin
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -37,12 +37,12 @@ myid = bot.uid
 MESAG = (
     str(CUSTOM_PMPERMIT)
     if CUSTOM_PMPERMIT
-    else "`TeleBot PM security! Please wait for me to approve you. 😊"
+    else "`Ryoishin PM security! Please wait for me to approve you. 😊"
 )
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin User"
 USER_BOT_WARN_ZERO = "`I had warned you not to spam. Now you have been blocked and reported until further notice.`\n\n**GoodBye!** "
 USER_BOT_NO_WARN = (
-    "**PM Security ~ TeleBot**\n\nNice to see you here, but  "
+    "**PM Security ~ Ryoishin**\n\nNice to see you here, but  "
     "[{}](tg://user?id={}) is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**You have** `{}/{}` **warnings...**"
     "\n\n   ~ Thank You."
@@ -145,7 +145,7 @@ async def approve_p_m(event):
     if event.fwd_from:
         return
     approved_users = pmpermit_sql.get_all_approved()
-    APPROVED_PMs = "[TeleBot] Currently Approved PMs\n"
+    APPROVED_PMs = "[Ryoishin] Currently Approved PMs\n"
     if len(approved_users) > 0:
         for a_user in approved_users:
             if a_user.reason:
@@ -162,7 +162,7 @@ async def approve_p_m(event):
                 out_file,
                 force_document=True,
                 allow_cache=False,
-                caption="[TeleBot]Current Approved PMs",
+                caption="[Ryoishin]Current Approved PMs",
                 reply_to=event,
             )
             await event.delete()
@@ -303,7 +303,7 @@ CMD_HELP.update(
         \n\n.disapprove/.da\nUse - DisApprove PM\
         \n\n.listapproved\nUse - Get all approved PMs.\
         \n\nSet var PMPERMIT_PIC for custom PMPic, CUSTOM_PMPERMIT for custom text, PMSECURITY <on/off> to enable/disable, INSTANT_BLOCK <on/off>.\
-        \nGet help from @TeleBotHelpBot."
+        \nGet help from @RyoishinHelpBot."
     }
 )
-# (c) TeleBot
+# (c) Ryoishin

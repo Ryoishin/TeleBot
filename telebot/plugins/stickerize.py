@@ -3,7 +3,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from telebot.utils import admin_cmd, sudo_cmd
 
-# (c)2020 TeleBot
+# (c)2020 Ryoishin
 
 
 @telebot.on(admin_cmd(pattern="stickerize(?: |)(.*)"))

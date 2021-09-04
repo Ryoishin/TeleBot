@@ -1,4 +1,4 @@
-# Made By @TeleBotHelp Keep Credits If You Are Goanna Kang This Lol
+# Made By @RyoishinHelp Keep Credits If You Are Goanna Kang This Lol
 # And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
 # Usage .actressdp I'm Not Responsible For Any Ban caused By This
 
@@ -54,7 +54,7 @@ async def animepp():
 async def main(event):
 
     await event.edit(
-        "**Starting Anime Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. By [TeleBot](https://github.com/xditya/TeleBot)**"
+        "**Starting Anime Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. By [Ryoishin](https://github.com/xditya/Ryoishin)**"
     )
 
     while True:

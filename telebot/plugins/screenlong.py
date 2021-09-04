@@ -54,7 +54,7 @@ async def _(event):
         if event.reply_to_msg_id:
             message_id = event.reply_to_msg_id
         with io.BytesIO(im_png) as out_file:
-            out_file.name = "TeleBotScreenCapture.PNG"
+            out_file.name = "RyoishinScreenCapture.PNG"
             await event.client.send_file(
                 event.chat_id,
                 out_file,

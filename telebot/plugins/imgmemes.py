@@ -1,6 +1,6 @@
 # All credits go to @MrConfused (pro)
 
-# Ported from CatUserBot for TeleBot
+# Ported from CatUserBot for Ryoishin
 # Kangers, don't remove this line
 # @its_xditya
 
@@ -40,8 +40,8 @@ async def trumptweet(text):
         f"https://nekobot.xyz/api/imagegen?type=trumptweet&text={text}"
     ).json()
     wew = r.get("message")
-    TeleBoturl = url(wew)
-    if not TeleBoturl:
+    Ryoishinurl = url(wew)
+    if not Ryoishinurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(wew).content)
@@ -55,8 +55,8 @@ async def changemymind(text):
         f"https://nekobot.xyz/api/imagegen?type=changemymind&text={text}"
     ).json()
     wew = r.get("message")
-    TeleBoturl = url(wew)
-    if not TeleBoturl:
+    Ryoishinurl = url(wew)
+    if not Ryoishinurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(wew).content)
@@ -70,8 +70,8 @@ async def kannagen(text):
         f"https://nekobot.xyz/api/imagegen?type=kannagen&text={text}"
     ).json()
     wew = r.get("message")
-    TeleBoturl = url(wew)
-    if not TeleBoturl:
+    Ryoishinurl = url(wew)
+    if not Ryoishinurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(wew).content)
@@ -85,8 +85,8 @@ async def moditweet(text):
         f"https://nekobot.xyz/api/imagegen?type=tweet&text={text}&username=narendramodi"
     ).json()
     wew = r.get("message")
-    TeleBoturl = url(wew)
-    if not TeleBoturl:
+    Ryoishinurl = url(wew)
+    if not Ryoishinurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(wew).content)
@@ -100,8 +100,8 @@ async def tweets(text1, text2):
         f"https://nekobot.xyz/api/imagegen?type=tweet&text={text1}&username={text2}"
     ).json()
     wew = r.get("message")
-    TeleBoturl = url(wew)
-    if not TeleBoturl:
+    Ryoishinurl = url(wew)
+    if not Ryoishinurl:
         return "check syntax once more"
     with open("temp.png", "wb") as f:
         f.write(requests.get(wew).content)

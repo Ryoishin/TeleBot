@@ -1,17 +1,17 @@
 {
- "name": "TeleBot - UserBot",
- "description": "An advanced Telethon Userbot, from @TeleBotSupport",
+ "name": "Ryoishin - UserBot",
+ "description": "An advanced Telethon Userbot, from @RyoishinSupport",
  "logo": "https://telegra.ph/file/0b1d5cb8deeec7a506154.jpg",
  "keywords": [
   "telegram",
   "userbot",
-  "TeleBot",
+  "Ryoishin",
   "modular",
   "productivity"
  ],
- "repository": "https://github.com/xditya/TeleBot/",
+ "repository": "https://github.com/xditya/Ryoishin/",
  "website": "https://xditya.gitbook.io/telebot/",
- "success_url": "https://t.me/TeleBotHelp/13",
+ "success_url": "https://t.me/RyoishinHelp/13",
  "stack": "container",
  "env": {
   "ENV": {
@@ -55,7 +55,7 @@
    "required": false
   },  
   "GIT_REPO_NAME": {
-   "description": "Your repo name Example: xditya/TeleBot, but GITHUB_ACCESS_TOKEN must be setup first.",
+   "description": "Your repo name Example: xditya/Ryoishin, but GITHUB_ACCESS_TOKEN must be setup first.",
    "value": "",
    "required": false
   },
@@ -95,7 +95,7 @@
    "required": false
   },
   "PRIVATE_GROUP_ID": {
-   "description": "ID of your private log channel/group. Read https://telegra.ph/TeleBot-Setup-06-06 for details.",
+   "description": "ID of your private log channel/group. Read https://telegra.ph/Ryoishin-Setup-06-06 for details.",
    "value": "",
    "required": true
   },

@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Ryoishin - UserBot
+#    Copyright (C) 2020 Ryoishin
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -29,9 +29,9 @@ async def sudo(event):
     sudo = "True" if Config.SUDO_USERS else "False"
     users = os.environ.get("SUDO_USERS", None)
     if sudo == "True":
-        await eor(event, f"**TeleBot**\nSudo - `Enabled`\nSudo user(s) - `{users}`")
+        await eor(event, f"**Ryoishin**\nSudo - `Enabled`\nSudo user(s) - `{users}`")
     else:
-        await eor(event, f"**TeleBot**\nSudo - `Disabled`")
+        await eor(event, f"**Ryoishin**\nSudo - `Disabled`")
 
 
 @telebot.on(admin_cmd(pattern="prefix"))

@@ -1,5 +1,5 @@
 """
-For TeleBot, credits to @pureindialover
+For Ryoishin, credits to @pureindialover
 """
 # Re-written by @its_xditya
 

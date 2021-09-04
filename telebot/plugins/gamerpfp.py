@@ -1,4 +1,4 @@
-# Made By @TeleBotComms Keep Credits If You Are Goanna Kang This Lol
+# Made By @RyoishinComms Keep Credits If You Are Goanna Kang This Lol
 
 # And Thanks To The Creator Of Autopic This Script Was Made from Snippets
 # From That Script
@@ -59,7 +59,7 @@ async def main(event):
 
     # Owner @NihiNivi
     await event.edit(
-        "**Starting Gamer Profile Pic.\n\nModded by[TeleBot](https://github.com/xditya/TeleBot)"
+        "**Starting Gamer Profile Pic.\n\nModded by[Ryoishin](https://github.com/xditya/Ryoishin)"
     )
 
     while True:

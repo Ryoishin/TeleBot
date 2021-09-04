@@ -1,9 +1,9 @@
-# TeleBot - Telegram UserBot
+# Ryoishin - Telegram UserBot
 
 # Repository Archieved.
 Please head on to [TeamUltroid](https://github.com/TeamUltroid) and use [Ultroid](https://github.com/TeamUltroid/Ultroid) instead.
 
-# <p align="left"><a href="https://github.com/xditya/TeleBot"><img src="https://github-readme-stats.vercel.app/api/pin?username=xditya&show_icons=true&theme=dark&hide_border=true&repo=TeleBot"></a></p><p align="centre"><a href="https://t.me/TeleBotHelpChat"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/xditya/TeleBot/stargazers"><img src="https://img.shields.io/github/stars/xditya/TeleBot?style=social"></a><a href="https://github.com/xditya/TeleBot/fork"><img src="https://img.shields.io/github/forks/xditya/TeleBot?label=Fork&logoColor=blue&style=social"></a>	<a href="https://github.com/xditya/TeleBot"><img src="https://img.shields.io/github/last-commit/xditya/TeleBot?style=flat-square"></a></p>
+# <p align="left"><a href="https://github.com/xditya/Ryoishin"><img src="https://github-readme-stats.vercel.app/api/pin?username=xditya&show_icons=true&theme=dark&hide_border=true&repo=Ryoishin"></a></p><p align="centre"><a href="https://t.me/RyoishinHelpChat"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/xditya/Ryoishin/stargazers"><img src="https://img.shields.io/github/stars/xditya/Ryoishin?style=social"></a><a href="https://github.com/xditya/Ryoishin/fork"><img src="https://img.shields.io/github/forks/xditya/Ryoishin?label=Fork&logoColor=blue&style=social"></a>	<a href="https://github.com/xditya/Ryoishin"><img src="https://img.shields.io/github/last-commit/xditya/Ryoishin?style=flat-square"></a></p>
     
 ## Video Tutorial on deploying
 
@@ -21,22 +21,22 @@ For passionate readers 😂 the documentation can be found [here](https://xditya
 
 ## The Easier Way to install
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xditya/TeleBot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xditya/Ryoishin)
 
 ## Support
-Join [TeleBot Support group](https://t.me/TeleBotSupport) for updates and new plugin suggestions.
+Join [Ryoishin Support group](https://t.me/RyoishinSupport) for updates and new plugin suggestions.
 Do fork and star the repo 
 
 ### Session String 
 <a href="https://repl.it/@xditya/telebot#main.py" target="_blank"><img src="https://img.shields.io/badge/run-string__session.py-red?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>    
-Alternative sites can be found [here](https://t.me/TeleBotHelpChat/272145), incase the top one doesn't work.
+Alternative sites can be found [here](https://t.me/RyoishinHelpChat/272145), incase the top one doesn't work.
 
 ### The Normal Way
 
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/xditya/TeleBot
-cd TeleBot
+git clone https://github.com/xditya/Ryoishin
+cd Ryoishin
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt

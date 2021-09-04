@@ -1,4 +1,4 @@
-# By @HeisenbergTheDanger for TeleBot
+# By @HeisenbergTheDanger for Ryoishin
 # @its_xditya
 # Kangers keep credits
 

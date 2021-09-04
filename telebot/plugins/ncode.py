@@ -1,7 +1,7 @@
 # Credits @buddhhu
 # This software is a part of https://github.com/buddhhu/Plus
 #
-# Ported to TeleBot by @its_xditya
+# Ported to Ryoishin by @its_xditya
 #
 
 import os

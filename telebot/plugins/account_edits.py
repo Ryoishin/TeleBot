@@ -1,4 +1,4 @@
-# Ported from other Telegram UserBots for TeleBot//Made for TeleBot
+# Ported from other Telegram UserBots for Ryoishin//Made for Ryoishin
 # Kangers, don't remove this line
 # @its_xditya
 

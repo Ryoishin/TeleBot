@@ -1,6 +1,6 @@
-#  (c)2020 TeleBot
+#  (c)2020 Ryoishin
 #
-# You may not use this plugin without proper authorship and consent from @TeleBotSupport
+# You may not use this plugin without proper authorship and consent from @RyoishinSupport
 #
 # Credits to everyone who made this plugin, idk who... I just merged them xD
 #

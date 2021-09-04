@@ -1,4 +1,4 @@
-# Ported from other Telegram UserBots for TeleBot//Made for TeleBot
+# Ported from other Telegram UserBots for Ryoishin//Made for Ryoishin
 # Kangers, don't remove this line
 # @its_xditya
 
@@ -56,7 +56,7 @@ async def animepp():
 async def main(event):
 
     await event.edit(
-        "**Starting Actress Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. \n By [TeleBot](https://github.com/xditya/TeleBot)**"
+        "**Starting Actress Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. \n By [Ryoishin](https://github.com/xditya/Ryoishin)**"
     )
 
     while True:

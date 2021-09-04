@@ -1,4 +1,4 @@
-# TeleBot
+# Ryoishin
 
 # Copyright (C) 2020 Adek Maulana.
 # All rights reserved.
@@ -204,7 +204,7 @@ async def _(givelogs):
         givelogs.chat_id,
         "logs-telebot.txt",
         reply_to=givelogs.id,
-        caption=f"**Heroku** TeleBot Logs.\nPasted [here]({url}) too!",
+        caption=f"**Heroku** Ryoishin Logs.\nPasted [here]({url}) too!",
     )
     await eor(givelogs, "Heroku Logs Incoming!!")
     await asyncio.sleep(5)

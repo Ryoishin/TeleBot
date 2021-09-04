@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Ryoishin - UserBot
+#    Copyright (C) 2020 Ryoishin
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -17,7 +17,7 @@
 # Based of AFK by @SpEcHIDe
 # Media Afk, Time, by @xditya
 """
-AFK Plugin for TeleBot
+AFK Plugin for Ryoishin
 Syntax: .afk REASON
 """
 import asyncio

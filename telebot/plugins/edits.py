@@ -1,8 +1,8 @@
-# (c) @TeleBotHelp
+# (c) @RyoishinHelp
 # By @xditya. Kangers keep credits xD
 # All in one code.
 
-"""TeleBot
+"""Ryoishin
 Available Commands:
 .tlol
 .lol
@@ -20,7 +20,7 @@ from telethon import events
 from telebot import ALIVE_NAME
 from telebot.utils import admin_cmd
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin"
 
 
 @telebot.on(admin_cmd(pattern=r"candy"))

@@ -1,4 +1,4 @@
-# Re-written for TeleBot by @its_xditya
+# Re-written for Ryoishin by @its_xditya
 # Kangers, repo will be taken down if these lines are removed
 
 """
@@ -179,7 +179,7 @@ async def _(event):
         elif i.status is None:
             n = n + 1
     if input_str:
-        required_string = """TeleBot has Kicked {} / {} users, out of which -
+        required_string = """Ryoishin has Kicked {} / {} users, out of which -
 Deleted Accounts: {}
 UserStatusEmpty: {}
 UserStatusLastMonth: {}

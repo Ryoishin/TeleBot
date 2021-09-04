@@ -1,7 +1,7 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
 # Licensed under the Raphielscape Public License, Version 1.b (the "License");
 # you may not use this file except in compliance with the License.
-# @TeleBotSupport
+# @RyoishinSupport
 
 """ Userbot module containing various scrapers. """
 import os
@@ -94,7 +94,7 @@ async def carbon_api(e):
         await e.client.send_file(
             e.chat_id,
             file,
-            caption="`Here's your carbon!` \n<< **Carbonised By TeleBot**>>\n**Colour Scheme: **`{}`".format(
+            caption="`Here's your carbon!` \n<< **Carbonised By Ryoishin**>>\n**Colour Scheme: **`{}`".format(
                 color_name
             ),
             force_document=True,

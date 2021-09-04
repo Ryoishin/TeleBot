@@ -65,7 +65,7 @@ async def _(event):
     contentType = output_file_name.headers.get("content-type")
     if "image" in contentType:
         with io.BytesIO(output_file_name.content) as remove_bg_image:
-            remove_bg_image.name = "TeleBot-Rmbg.png"
+            remove_bg_image.name = "Ryoishin-Rmbg.png"
             await borg.send_file(
                 event.chat_id,
                 remove_bg_image,
@@ -78,7 +78,7 @@ async def _(event):
         ms = (end - start).seconds
         await eor(
             event,
-            "Removed dat annoying Backgroup in {} seconds, powered by @TeleBotHelp".format(
+            "Removed dat annoying Backgroup in {} seconds, powered by @RyoishinHelp".format(
                 ms
             ),
         )

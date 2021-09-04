@@ -23,8 +23,8 @@ async def _(event):
             "Hello,",
             "Hello, do you need support?",
             "Then join the support group.",
-            "[Join Now](t.me/TeleBotHelpChat)",
-            "[SUPPORT GROUP](t.me/TeleBotHelpChat)",
+            "[Join Now](t.me/RyoishinHelpChat)",
+            "[SUPPORT GROUP](t.me/RyoishinHelpChat)",
         ]
 
         for i in animation_ttl:

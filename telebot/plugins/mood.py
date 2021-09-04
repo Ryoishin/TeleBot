@@ -1,13 +1,13 @@
-#  (c)2020 TeleBot
+#  (c)2020 Ryoishin
 #
-# You may not use this plugin without proper authorship and consent from @TeleBotSupport
+# You may not use this plugin without proper authorship and consent from @RyoishinSupport
 #
 from telethon.tl import functions
 
 from telebot import ALIVE_NAME, CMD_HELP
 from telebot.utils import admin_cmd
 
-TELENAME = ALIVE_NAME if ALIVE_NAME else "TeleBot"
+TELENAME = ALIVE_NAME if ALIVE_NAME else "Ryoishin"
 
 # set your mood
 

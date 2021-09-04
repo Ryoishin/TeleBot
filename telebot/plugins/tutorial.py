@@ -1,4 +1,4 @@
-"""Plugin to get the video tutorial to deploy TeleBot
+"""Plugin to get the video tutorial to deploy Ryoishin
 .tut"""
 
 from telebot.utils import admin_cmd

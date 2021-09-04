@@ -1,5 +1,5 @@
-# (c)2020 TeleBot
-# You may not use this file without proper authorship and consent from @TeleBotSupport
+# (c)2020 Ryoishin
+# You may not use this file without proper authorship and consent from @RyoishinSupport
 #
 """
 Available command(s)
@@ -41,7 +41,7 @@ def choser(cmd, pack, blacklist=None):
 
 choser(
     "sticklol",
-    "TeleBot_LOLPack",
+    "Ryoishin_LOLPack",
     {
         3088919966519394666,
         3088919966519394334,

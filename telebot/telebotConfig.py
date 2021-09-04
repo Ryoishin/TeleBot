@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Ryoishin - UserBot
+#    Copyright (C) 2020 Ryoishin
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -131,7 +131,7 @@ if ENV:
             "HASH_TO_TORRENT_API", "https://example.com/torrent/{}")
         # This is required for the @telegraph functionality.
         TELEGRAPH_SHORT_NAME = os.environ.get(
-            "TELEGRAPH_SHORT_NAME", "TeleBot")
+            "TELEGRAPH_SHORT_NAME", "Ryoishin")
         # Get a Free API Key from OCR.Space
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         # Send .get_id in any group with all your administration bots (added)

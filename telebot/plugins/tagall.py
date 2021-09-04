@@ -6,7 +6,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 from telebot.utils import admin_cmd
 
-# Added to TeleBot by @its_xditya
+# Added to Ryoishin by @its_xditya
 
 
 @telebot.on(admin_cmd(pattern=r"administrator", outgoing=True))
@@ -27,7 +27,7 @@ async def _(event):
     await event.delete()
 
 
-# Added to TeleBot by @its_xditya
+# Added to Ryoishin by @its_xditya
 
 
 @telebot.on(admin_cmd(pattern=r"tagall", outgoing=True))

@@ -1,5 +1,5 @@
 # credits to @mrconfused
-# @TeleBotSupport
+# @RyoishinSupport
 
 import io
 import sys

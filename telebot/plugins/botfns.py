@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Ryoishin - UserBot
+#    Copyright (C) 2020 Ryoishin
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -215,7 +215,7 @@ async def _(event):
                 await conv.get_response()
                 await conv.send_message("/start")
                 audio = await conv.get_response()
-                final = ("See if you are limited..\n(c)@TeleBotSupport", "")
+                final = ("See if you are limited..\n(c)@RyoishinSupport", "")
                 await borg.send_message(event.chat_id, audio.text)
                 await event.delete()
             except YouBlockedUserError:
@@ -249,7 +249,7 @@ async def _(event):
             event.chat_id, response.message, reply_to=reply_message
         )
         await x.edit(
-            "Downloaded by [TeleBot](t.me/TeleBotSupport), via @gitdownloadbot"
+            "Downloaded by [Ryoishin](t.me/RyoishinSupport), via @gitdownloadbot"
         )
 
 

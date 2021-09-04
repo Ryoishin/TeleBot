@@ -10,7 +10,7 @@ from uniborg.util import admin_cmd
 from telebot import ALIVE_NAME, CMD_HELP
 
 DEL_TIME_OUT = 60
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "TeleBot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin"
 
 
 @telebot.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602

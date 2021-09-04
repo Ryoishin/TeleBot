@@ -1,5 +1,5 @@
-#    TeleBot - UserBot
-#    Copyright (C) 2020 TeleBot
+#    Ryoishin - UserBot
+#    Copyright (C) 2020 Ryoishin
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published by
@@ -237,6 +237,6 @@ CMD_HELP.update(
         \n**Usage**: Mass-Ban in all feds you are admin in.\
         \nSet `EXCLUDE_FED fedid1|fedid2` in heroku vars to exclude those feds.\
         \nSet var `FBAN_GROUP_ID` to the group with rose, where you want FBan to take place.\
-        \n\nGet help - @TeleBotSupport."
+        \n\nGet help - @RyoishinSupport."
     }
 )

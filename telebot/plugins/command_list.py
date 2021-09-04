@@ -1,4 +1,4 @@
-# Join @TeleBotHelp for custom plugins
+# Join @RyoishinHelp for custom plugins
 
 import asyncio
 
@@ -23,14 +23,14 @@ async def install(event):
     o = "\n".join(_o)
     OUTPUT = (
         OUTPUT
-    ) = f"Here is the list of plugins found in 'master' branch of TeleBot.\n{o}\n\nUse .help <cmd_name> to learn how a paticular plugin works.\nConsider joining @TeleBotSupport for help!"
+    ) = f"Here is the list of plugins found in 'master' branch of Ryoishin.\n{o}\n\nUse .help <cmd_name> to learn how a paticular plugin works.\nConsider joining @RyoishinSupport for help!"
     await tele.edit("`Plugins extracted, pasting it...`")
     message = OUTPUT
     url = "https://del.dog/documents"
     r = requests.post(url, data=message.encode("UTF-8")).json()
     url = f"https://del.dog/{r['key']}"
     await tele.edit(
-        f"`All plugins available in` **TeleBot** `can be found` [here]({url})!!"
+        f"`All plugins available in` **Ryoishin** `can be found` [here]({url})!!"
     )
 
 

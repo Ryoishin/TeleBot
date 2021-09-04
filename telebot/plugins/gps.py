@@ -5,7 +5,7 @@ credits :@mrconfused
 
 # help from @sunda005 and @SpEcHIDe
 # don't edit credits
-# Plugin for TeleBot
+# Plugin for Ryoishin
 
 from geopy.geocoders import Nominatim
 from telethon.tl import types
