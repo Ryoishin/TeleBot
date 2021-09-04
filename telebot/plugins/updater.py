@@ -3,7 +3,7 @@
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 # credits to @AvinashReddy3108
-# Rewritten for Ryoishin by @xditya
+# Rewritten for Ryoishin by @TeamRyoishin
 
 """
 This module is used for updating Ryoishin
@@ -24,7 +24,7 @@ requirements_path = path.join(
 HEROKU_API_KEY = Var.HEROKU_API_KEY
 HEROKU_APP_NAME = Var.HEROKU_APP_NAME
 GIT_REPO_NAME = "Ryoishin"
-UPSTREAM_REPO_URL = "https://github.com/xditya/Ryoishin"
+UPSTREAM_REPO_URL = "https://github.com/TeamRyoishin/Ryoishin"
 
 xxxx = CMD_HNDLR if CMD_HNDLR else "."
 

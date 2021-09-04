@@ -1,7 +1,7 @@
 """
 For Ryoishin, credits to @pureindialover
 """
-# Re-written by @its_xditya
+# Re-written by @its_TeamRyoishin
 
 from ryoishin import CMD_HELP
 from ryoishin.utils import admin_cmd

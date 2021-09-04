@@ -1,5 +1,5 @@
 # For Ryoishin
-# By @AKASH_AM1 and @xditya
+# By @AKASH_AM1 and @TeamRyoishin
 # Kangers keep cr eors
 from ryoishin import ALIVE_NAME
 from ryoishin.utils import admin_cmd

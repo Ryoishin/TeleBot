@@ -12,7 +12,7 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
-# Modified to suit needs, by @its_xditya
+# Modified to suit needs, by @its_TeamRyoishin
 #
 """-_-
 """

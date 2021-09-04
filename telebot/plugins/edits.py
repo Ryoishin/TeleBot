@@ -1,5 +1,5 @@
 # (c) @RyoishinHelp
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 # All in one code.
 
 """Ryoishin
@@ -33,7 +33,7 @@ async def _(event):
         deq.rotate(1)
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=r"nothappy"))
@@ -47,7 +47,7 @@ async def _(event):
         deq.rotate(1)
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=r"heart"))
@@ -61,7 +61,7 @@ async def _(event):
         deq.rotate(1)
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=r"tlol"))
@@ -75,7 +75,7 @@ async def _(event):
         deq.rotate(1)
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=r"lol"))
@@ -89,7 +89,7 @@ async def _(event):
         deq.rotate(1)
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=r"police"))
@@ -127,7 +127,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=f"smoon", outgoing=True))
@@ -165,7 +165,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 @ryoishin.on(admin_cmd(pattern=f"tmoon", outgoing=True))
 async def _(event):
 
@@ -225,7 +225,7 @@ async def _(event):
         await event.edit(animation_chars[i % 117])
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern="loveu", outgoing=True))
@@ -313,7 +313,7 @@ async def _(event):
     await event.delete()
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=r"police"))
@@ -351,7 +351,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=f"rain", outgoing=True))
@@ -365,7 +365,7 @@ async def _(event):
         deq.rotate(1)
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=f"snake", outgoing=True))
@@ -587,7 +587,7 @@ async def _(event):
         deq.rotate(1)
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(pattern=f"virus", outgoing=True))
@@ -647,7 +647,7 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(outgoing=True, pattern="lul"))
@@ -660,7 +660,7 @@ async def join(e):
         )
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(outgoing=True, pattern="yes"))
@@ -673,7 +673,7 @@ async def join(e):
         )
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(outgoing=True, pattern="gn"))
@@ -684,7 +684,7 @@ async def join(e):
     )
 
 
-# By @xditya. Kangers keep credits xD
+# By @TeamRyoishin. Kangers keep credits xD
 
 
 @ryoishin.on(admin_cmd(outgoing=True, pattern="gm"))

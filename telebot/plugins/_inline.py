@@ -93,11 +93,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 text=f"**Ryoishin Stats For [{DEFAULTUSER}](tg://user?id={myid})**\n\n__Bot is functioning normally, master!__\n\n(c) @RyoishinSupport",
                 buttons=[
                     [custom.Button.inline("Stats", data="statcheck")],
-                    [Button.url("Repo", "https://github.com/xditya/Ryoishin")],
+                    [Button.url("Repo", "https://github.com/TeamRyoishin/Ryoishin")],
                     [
                         Button.url(
                             "Deploy Now!",
-                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin&template=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamRyoishin%2FRyoishin&template=https%3A%2F%2Fgithub.com%2FTeamRyoishin%2FRyoishin",
                         )
                     ],
                 ],
@@ -122,10 +122,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 text=f"Ryoishin - Telegram Userbot.",
                 buttons=[
                     [
-                        Button.url("Repo", "https://github.com/xditya/Ryoishin"),
+                        Button.url("Repo", "https://github.com/TeamRyoishin/Ryoishin"),
                         Button.url(
                             "Deploy",
-                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin&template=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamRyoishin%2FRyoishin&template=https%3A%2F%2Fgithub.com%2FTeamRyoishin%2FRyoishin",
                         ),
                     ],
                     [Button.url("Support", "https://t.me/RyoishinSupport")],
@@ -136,14 +136,14 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 "Source Code",
                 text="**Welcome to Ryoishin**\n\n`Click below buttons for more`",
                 buttons=[
-                    [custom.Button.url("Creator👨‍🦱", "https://t.me/its_xditya")],
+                    [custom.Button.url("Creator👨‍🦱", "https://t.me/its_TeamRyoishin")],
                     [
                         custom.Button.url(
-                            "👨‍💻Source Code‍💻", "https://github.com/xditya/Ryoishin"
+                            "👨‍💻Source Code‍💻", "https://github.com/TeamRyoishin/Ryoishin"
                         ),
                         custom.Button.url(
                             "Deploy 🌀",
-                            "https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin",
+                            "https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FTeamRyoishin%2FRyoishin",
                         ),
                     ],
                     [

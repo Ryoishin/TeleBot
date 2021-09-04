@@ -1,5 +1,5 @@
 # By @HeisenbergTheDanger for Ryoishin
-# @its_xditya
+# @its_TeamRyoishin
 # Kangers keep credits
 
 from ryoishin import CMD_HELP

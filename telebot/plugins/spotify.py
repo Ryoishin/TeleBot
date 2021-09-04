@@ -1,7 +1,7 @@
 """
 Music scrapper - Scrapps of SMD Database
 """
-# Better now - @its_xditya
+# Better now - @its_TeamRyoishin
 # Based off plugin by @okay_retard && @hellboi_atul
 
 from ryoishin.plugins import OWNER_ID, TELE_NAME

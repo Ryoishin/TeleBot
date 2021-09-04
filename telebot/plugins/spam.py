@@ -18,7 +18,7 @@ r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 #######################################
 
-# ported by @its_xditya
+# ported by @its_TeamRyoishin
 
 
 @ryoishin.on(admin_cmd(pattern="tspam"))

@@ -1,6 +1,6 @@
 # Ported from other Telegram UserBots for Ryoishin//Made for Ryoishin
 # Kangers, don't remove this line
-# @its_xditya
+# @its_TeamRyoishin
 
 """Count the Number of Dialogs you have in your Telegram Account
 Syntax: .count"""

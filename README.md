@@ -3,7 +3,7 @@
 # Repository Archieved.
 Please head on to [TeamUltroid](https://github.com/TeamUltroid) and use [Ultroid](https://github.com/TeamUltroid/Ultroid) instead.
 
-# <p align="left"><a href="https://github.com/xditya/Ryoishin"><img src="https://github-readme-stats.vercel.app/api/pin?username=xditya&show_icons=true&theme=dark&hide_border=true&repo=Ryoishin"></a></p><p align="centre"><a href="https://t.me/RyoishinHelpChat"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/xditya/Ryoishin/stargazers"><img src="https://img.shields.io/github/stars/xditya/Ryoishin?style=social"></a><a href="https://github.com/xditya/Ryoishin/fork"><img src="https://img.shields.io/github/forks/xditya/Ryoishin?label=Fork&logoColor=blue&style=social"></a>	<a href="https://github.com/xditya/Ryoishin"><img src="https://img.shields.io/github/last-commit/xditya/Ryoishin?style=flat-square"></a></p>
+# <p align="left"><a href="https://github.com/TeamRyoishin/Ryoishin"><img src="https://github-readme-stats.vercel.app/api/pin?username=TeamRyoishin&show_icons=true&theme=dark&hide_border=true&repo=Ryoishin"></a></p><p align="centre"><a href="https://t.me/RyoishinHelpChat"> <img src="https://img.shields.io/badge/telegram-Support_Group-blue?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/TeamRyoishin/Ryoishin/stargazers"><img src="https://img.shields.io/github/stars/TeamRyoishin/Ryoishin?style=social"></a><a href="https://github.com/TeamRyoishin/Ryoishin/fork"><img src="https://img.shields.io/github/forks/TeamRyoishin/Ryoishin?label=Fork&logoColor=blue&style=social"></a>	<a href="https://github.com/TeamRyoishin/Ryoishin"><img src="https://img.shields.io/github/last-commit/TeamRyoishin/Ryoishin?style=flat-square"></a></p>
     
 ## Video Tutorial on deploying
 
@@ -17,25 +17,25 @@ Click the below button to watch the video tutorial on deploying
     
     
 ## Documentation
-For passionate readers 😂 the documentation can be found [here](https://xditya.gitbook.io/ryoishin/)
+For passionate readers 😂 the documentation can be found [here](https://TeamRyoishin.gitbook.io/ryoishin/)
 
 ## The Easier Way to install
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xditya/Ryoishin)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TeamRyoishin/Ryoishin)
 
 ## Support
 Join [Ryoishin Support group](https://t.me/RyoishinSupport) for updates and new plugin suggestions.
 Do fork and star the repo 
 
 ### Session String 
-<a href="https://repl.it/@xditya/ryoishin#main.py" target="_blank"><img src="https://img.shields.io/badge/run-string__session.py-red?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>    
+<a href="https://repl.it/@TeamRyoishin/ryoishin#main.py" target="_blank"><img src="https://img.shields.io/badge/run-string__session.py-red?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>    
 Alternative sites can be found [here](https://t.me/RyoishinHelpChat/272145), incase the top one doesn't work.
 
 ### The Normal Way
 
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/xditya/Ryoishin
+git clone https://github.com/TeamRyoishin/Ryoishin
 cd Ryoishin
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate

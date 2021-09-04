@@ -1,6 +1,6 @@
 # Ported from other Telegram UserBots for Ryoishin//Made for Ryoishin
 # Kangers, don't remove this line
-# @its_xditya
+# @its_TeamRyoishin
 
 # Usage .actressdp Im Not Responsible For Any Ban caused By This
 
@@ -55,7 +55,7 @@ async def animepp():
 async def main(event):
 
     await event.edit(
-        "**Starting Actress Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. \n By [Ryoishin](https://github.com/xditya/Ryoishin)**"
+        "**Starting Actress Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. \n By [Ryoishin](https://github.com/TeamRyoishin/Ryoishin)**"
     )
 
     while True:

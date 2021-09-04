@@ -14,7 +14,7 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# By @xditya. Thanks to @AvinashReddy for the ytdl base.
+# By @TeamRyoishin. Thanks to @AvinashReddy for the ytdl base.
 
 import json
 import os

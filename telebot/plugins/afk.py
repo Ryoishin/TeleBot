@@ -15,7 +15,7 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Based of AFK by @SpEcHIDe
-# Media Afk, Time, by @xditya
+# Media Afk, Time, by @TeamRyoishin
 """
 AFK Plugin for Ryoishin
 Syntax: .afk REASON

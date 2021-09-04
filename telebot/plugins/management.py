@@ -1,4 +1,4 @@
-# Re-written for Ryoishin by @its_xditya
+# Re-written for Ryoishin by @its_TeamRyoishin
 # Kangers, repo will be taken down if these lines are removed
 
 """

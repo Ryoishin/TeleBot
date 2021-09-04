@@ -15,6 +15,6 @@ apt-get update
 apt-get upgrade -y
 pkg upgrade -y
 pkg install python wget -y
-wget https://raw.githubusercontent.com/xditya/Ryoishin/master/resources/ryoishin-setup.py
+wget https://raw.githubusercontent.com/TeamRyoishin/Ryoishin/master/resources/ryoishin-setup.py
 pip install telethon
 python ryoishin-setup.py

@@ -14,7 +14,7 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# Imported by @its_xditya
+# Imported by @its_TeamRyoishin
 
 from ryoishin import CMD_HELP, bot
 from ryoishin.utils import admin_cmd

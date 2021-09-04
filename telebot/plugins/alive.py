@@ -79,7 +79,7 @@ async def amireallyalive(alive):
         tele += (
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
         )
-        tele += "    [✨ GitHub Repository ✨](https://github.com/xditya/Ryoishin)"
+        tele += "    [✨ GitHub Repository ✨](https://github.com/TeamRyoishin/Ryoishin)"
         await alive.get_chat()
         await alive.delete()
         """ For .alive command, check if the bot is running.  """
@@ -106,7 +106,7 @@ async def amireallyalive(alive):
             f"{telemoji} **Ryoishin Uptime**: `{uptime}`\n"
             f"{telemoji} **Database Status**: `All OK 👌!`\n"
             f"{telemoji} **My pro owner** : [{DEFAULTUSER}](tg://user?id={myid})\n\n"
-            "    [✨ GitHub Repository ✨](https://github.com/xditya/Ryoishin)",
+            "    [✨ GitHub Repository ✨](https://github.com/TeamRyoishin/Ryoishin)",
             link_preview=False,
         )
         await borg.send_file(alive.chat_id, file=sticker)

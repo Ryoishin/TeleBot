@@ -80,7 +80,7 @@ async def tweet(uname, mssg):
     return "tele.jpg"
 
 
-# by @its_xditya
+# by @its_TeamRyoishin
 
 
 @ryoishin.on(admin_cmd(pattern="tweet ?(.*)"))

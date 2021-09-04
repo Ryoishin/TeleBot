@@ -1,4 +1,4 @@
-# (c) @its_xditya
+# (c) @its_TeamRyoishin
 from sqlalchemy import Column, String
 from . import BASE, SESSION
 

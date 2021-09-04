@@ -2,7 +2,7 @@
 
 # Ported from CatUserBot for Ryoishin
 # Kangers, don't remove this line
-# @its_xditya
+# @its_TeamRyoishin
 
 import re
 

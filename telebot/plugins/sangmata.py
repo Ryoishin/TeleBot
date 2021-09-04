@@ -1,5 +1,5 @@
 # Made For DARK COBRA and TELEBOT...
-# Made by team cobra with @xditya
+# Made by team cobra with @TeamRyoishin
 # Retrieves the name history and the username history of the replied user..
 
 from ryoishin import CMD_HELP

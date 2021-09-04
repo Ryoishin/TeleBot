@@ -1,5 +1,5 @@
 # credits to the respective devs
-# ported by @its_xditya
+# ported by @its_TeamRyoishin
 
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE

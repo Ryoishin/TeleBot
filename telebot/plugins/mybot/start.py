@@ -14,7 +14,7 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# (c) @xditya
+# (c) @TeamRyoishin
 
 import re
 from ryoishin.plugins.mybot import *
@@ -85,7 +85,7 @@ async def start_all(event):
                                   caption=startotherena,
                                   buttons=[
                                       [Button.url(
-                                          "Ryoishin", url="https://github.com/xditya/Ryoishin")],
+                                          "Ryoishin", url="https://github.com/TeamRyoishin/Ryoishin")],
                                       [Button.inline(
                                           "Whats this?", data="ryoishin")]
                                   ]
@@ -95,7 +95,7 @@ async def start_all(event):
                                      startotherena,
                                      buttons=[
                                          [Button.url(
-                                             "Ryoishin", url="https://github.com/xditya/Ryoishin")],
+                                             "Ryoishin", url="https://github.com/TeamRyoishin/Ryoishin")],
                                          [Button.inline(
                                              "Whats this?", data="ryoishin")]
                                      ]
@@ -181,8 +181,8 @@ async def settings(event):
 async def settings(event):
     await event.edit("Browse through the available options:",
                      buttons=[
-                         [(Button.url("Repository", url="https://github.com/xditya/Ryoishin")),
-                          (Button.url("Deploy", url="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin%2F&template=https%3A%2F%2Fgithub.com%2Fxditya%2FRyoishin"))],
+                         [(Button.url("Repository", url="https://github.com/TeamRyoishin/Ryoishin")),
+                          (Button.url("Deploy", url="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTeamRyoishin%2FRyoishin%2F&template=https%3A%2F%2Fgithub.com%2FTeamRyoishin%2FRyoishin"))],
                          [Button.url("Support",
                                      url="https://t.me/RyoishinSupport")]
                      ])

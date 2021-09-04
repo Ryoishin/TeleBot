@@ -18,7 +18,7 @@ import asyncio
 
 from ryoishin import CMD_HELP
 
-# By @HeisenbergTheDanger, @its_xditya
+# By @HeisenbergTheDanger, @its_TeamRyoishin
 
 
 @ryoishin.on(admin_cmd("superfban ?(.*)"))
@@ -67,7 +67,7 @@ async def _(event):
             await event.edit("Something went wrong.")
             return
     except BaseException:
-        if FBAN == "@HeisenbergTheDanger" or FBAN == "@xditya":
+        if FBAN == "@HeisenbergTheDanger" or FBAN == "@TeamRyoishin":
             await event.edit("Something went wrong.")
             return
     if Config.FBAN_GROUP_ID:
@@ -153,7 +153,7 @@ async def _(event):
     )
 
 
-# By @HeisenbergTheDanger, @its_xditya
+# By @HeisenbergTheDanger, @its_TeamRyoishin
 
 
 @ryoishin.on(admin_cmd("superunfban ?(.*)"))
@@ -229,7 +229,7 @@ async def _(event):
     await event.edit(f"SuperUnFBan Completed. Affected {len(fedList)} feds.\n#TB")
 
 
-# By @HeisenbergTheDanger, @its_xditya
+# By @HeisenbergTheDanger, @its_TeamRyoishin
 
 CMD_HELP.update(
     {

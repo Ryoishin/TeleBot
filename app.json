@@ -9,8 +9,8 @@
   "modular",
   "productivity"
  ],
- "repository": "https://github.com/xditya/Ryoishin/",
- "website": "https://xditya.gitbook.io/ryoishin/",
+ "repository": "https://github.com/TeamRyoishin/Ryoishin/",
+ "website": "https://TeamRyoishin.gitbook.io/ryoishin/",
  "success_url": "https://t.me/RyoishinHelp/13",
  "stack": "container",
  "env": {
@@ -32,7 +32,7 @@
    "value": ""
   },
   "STRING_SESSION": {
-   "description": "Get this value by running python3 telesetup.py locally or https://ryoishin-sessionstring-generator.xditya.repl.run online.",
+   "description": "Get this value by running python3 telesetup.py locally or https://ryoishin-sessionstring-generator.TeamRyoishin.repl.run online.",
    "value": ""
   },  
   "CUSTOM_PMPERMIT": {
@@ -55,7 +55,7 @@
    "required": false
   },  
   "GIT_REPO_NAME": {
-   "description": "Your repo name Example: xditya/Ryoishin, but GITHUB_ACCESS_TOKEN must be setup first.",
+   "description": "Your repo name Example: TeamRyoishin/Ryoishin, but GITHUB_ACCESS_TOKEN must be setup first.",
    "value": "",
    "required": false
   },

@@ -1,6 +1,6 @@
 """
 UserBot Module to search the internet
-All-in-one by @its_xditya
+All-in-one by @its_TeamRyoishin
 (c)Ryoishin
 
 Available commands:
