@@ -22,9 +22,9 @@ jobs:
 
         with:
 
-          find: "TeleBot"
+          find: "telebot"
 
-          replace: "Ryoishin"
+          replace: "ryoishin"
 
       - name: Create Pull Request
 
