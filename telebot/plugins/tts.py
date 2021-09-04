@@ -11,11 +11,11 @@ from datetime import datetime
 
 from gtts import gTTS
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="tts (.*)"))
-@telebot.on(sudo_cmd(pattern="tts (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="tts (.*)"))
+@ryoishin.on(sudo_cmd(pattern="tts (.*)", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:

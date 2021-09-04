@@ -10,14 +10,14 @@ import os.path
 import time
 from os.path import exists, isdir
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd, humanbytes
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd, humanbytes
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"ls ?(.*)"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"ls ?(.*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"ls ?(.*)"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"ls ?(.*)"))
 async def lst(event):
     if event.fwd_from:
         return

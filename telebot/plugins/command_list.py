@@ -4,16 +4,16 @@ import asyncio
 
 import requests
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="cmds", outgoing=True))
-@telebot.on(sudo_cmd(pattern="cmds", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="cmds", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="cmds", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
         return
     tele = await eor(event, "`Searching for all plugins...`")
-    cmd = "ls telebot/plugins"
+    cmd = "ls ryoishin/plugins"
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )

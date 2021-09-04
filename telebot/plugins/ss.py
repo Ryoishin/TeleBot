@@ -4,7 +4,7 @@ from telethon import functions
 from uniborg.util import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="ss"))
+@ryoishin.on(admin_cmd(pattern="ss"))
 async def _(event):
     if event.fwd_from:
         return

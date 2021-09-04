@@ -20,8 +20,8 @@ from telethon.events import ChatAction
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from telebot import CMD_HELP, bot
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP, bot
+from ryoishin.utils import admin_cmd
 
 client = bot
 
@@ -66,11 +66,11 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@telebot.on(ChatAction)
+@ryoishin.on(ChatAction)
 async def handler(tele):
     if tele.user_joined or tele.user_added:
         try:
-            from telebot.plugins.sql_helper.gmute_sql import is_gmuted
+            from ryoishin.plugins.sql_helper.gmute_sql import is_gmuted
 
             guser = await tele.get_user()
             gmuted = is_gmuted(guser.id)
@@ -96,7 +96,7 @@ async def handler(tele):
                             return
 
 
-@telebot.on(admin_cmd(pattern="gban(?: |$)(.*)"))
+@ryoishin.on(admin_cmd(pattern="gban(?: |$)(.*)"))
 async def gspider(rk):
     lazy = rk
     sender = await lazy.get_sender()
@@ -129,7 +129,7 @@ async def gspider(rk):
         if user.id == 719195224:
             return await rkp.edit("**Error! cant gban this user.**")
         try:
-            from telebot.plugins.sql_helper.gmute_sql import gmute
+            from ryoishin.plugins.sql_helper.gmute_sql import gmute
         except BaseException:
             pass
         try:
@@ -160,7 +160,7 @@ async def gspider(rk):
     )
 
 
-@telebot.on(admin_cmd(pattern="ungban(?: |$)(.*)"))
+@ryoishin.on(admin_cmd(pattern="ungban(?: |$)(.*)"))
 async def gspider(rk):
     lazy = rk
     sender = await lazy.get_sender()
@@ -193,7 +193,7 @@ async def gspider(rk):
         if user.id == 719195224:
             return await rkp.edit(f"**Error! cant ungban this user.**")
         try:
-            from telebot.plugins.sql_helper.gmute_sql import ungmute
+            from ryoishin.plugins.sql_helper.gmute_sql import ungmute
         except BaseException:
             pass
         try:

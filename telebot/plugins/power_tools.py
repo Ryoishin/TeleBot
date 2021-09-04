@@ -8,11 +8,11 @@ Available Commands:
 import os
 import sys
 
-from telebot import CMD_HELP, CMD_HNDLR
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP, CMD_HNDLR
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="restart"))
+@ryoishin.on(admin_cmd(pattern="restart"))
 async def _(event):
     if event.fwd_from:
         return
@@ -35,7 +35,7 @@ async def _(event):
     quit()
 
 
-@telebot.on(admin_cmd(pattern="shutdown"))
+@ryoishin.on(admin_cmd(pattern="shutdown"))
 async def _(event):
     if event.fwd_from:
         return

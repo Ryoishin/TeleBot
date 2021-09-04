@@ -4,7 +4,7 @@ By :- @PhycoNinja13b
 Modified by :- @kirito6969
 .weeb <text> """
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 normiefont = [
     "a",
@@ -64,8 +64,8 @@ weebyfont = [
 ]
 
 
-@telebot.on(admin_cmd(pattern="weeb ?(.*)"))
-@telebot.on(sudo_cmd(pattern="weeb ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="weeb ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="weeb ?(.*)", allow_sudo=True))
 async def weebify(event):
 
     args = event.pattern_match.group(1)

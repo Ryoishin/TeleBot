@@ -2,11 +2,11 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="mask ?(.*)"))
-@telebot.on(sudo_cmd(pattern="mask ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="mask ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="mask ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

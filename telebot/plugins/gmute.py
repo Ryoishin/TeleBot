@@ -1,12 +1,12 @@
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"gmute ?(\d+)?"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"gmute ?(\d+)?"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"gmute ?(\d+)?"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"gmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
@@ -38,8 +38,8 @@ async def startgmute(event):
         await eor(event, "Silence now. **Successfully gmuted that person**")
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"ungmute ?(\d+)?"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"ungmute ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:

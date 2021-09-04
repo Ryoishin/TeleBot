@@ -4,15 +4,15 @@
 #
 from telethon.tl import functions
 
-from telebot import ALIVE_NAME, CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import ALIVE_NAME, CMD_HELP
+from ryoishin.utils import admin_cmd
 
 TELENAME = ALIVE_NAME if ALIVE_NAME else "Ryoishin"
 
 # set your mood
 
 
-@telebot.on(admin_cmd(pattern="mood ((.|\n)*)"))  # pylint:disable=E0602,W0703
+@ryoishin.on(admin_cmd(pattern="mood ((.|\n)*)"))  # pylint:disable=E0602,W0703
 async def _(event):
     if event.fwd_from:
         return
@@ -33,7 +33,7 @@ async def _(event):
 # reset back
 
 
-@telebot.on(admin_cmd(pattern="resetmood"))  # pylint:disable=E0602,W0703
+@ryoishin.on(admin_cmd(pattern="resetmood"))  # pylint:disable=E0602,W0703
 async def _(event):
     if event.fwd_from:
         return

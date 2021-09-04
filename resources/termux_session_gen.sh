@@ -15,6 +15,6 @@ apt-get update
 apt-get upgrade -y
 pkg upgrade -y
 pkg install python wget -y
-wget https://raw.githubusercontent.com/xditya/Ryoishin/master/resources/telebot-setup.py
+wget https://raw.githubusercontent.com/xditya/Ryoishin/master/resources/ryoishin-setup.py
 pip install telethon
-python telebot-setup.py
+python ryoishin-setup.py

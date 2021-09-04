@@ -1,1 +1,1 @@
-telebot: python -m telebot
+ryoishin: python -m ryoishin

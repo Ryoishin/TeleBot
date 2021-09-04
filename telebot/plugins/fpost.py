@@ -7,13 +7,13 @@ credit: @r4v4n4"""
 
 import string
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 msg_cache = {}
 
 
-@telebot.on(admin_cmd(pattern=r"fpost\s+(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern=r"fpost\s+(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"fpost\s+(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern=r"fpost\s+(.*)", allow_sudo=True))
 async def _(event):
     await event.delete()
     text = event.pattern_match.group(1)

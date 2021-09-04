@@ -2,8 +2,8 @@ import os
 
 import requests
 
-from telebot import CMD_HELP, OCR_SPACE_API_KEY, TEMP_DOWNLOAD_DIRECTORY, bot
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP, OCR_SPACE_API_KEY, TEMP_DOWNLOAD_DIRECTORY, bot
+from ryoishin.utils import admin_cmd
 
 
 async def ocr_space_file(
@@ -36,8 +36,8 @@ async def ocr_space_file(
     return r.json()
 
 
-@telebot.on(admin_cmd(pattern="ocr(?: |$)(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern="ocr(?: |$)(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="ocr(?: |$)(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="ocr(?: |$)(.*)", allow_sudo=True))
 async def ocr(event):
     await eor(event, "`Reading...`")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):

@@ -5,11 +5,11 @@
 Syntax: .ud Query"""
 import asyncurban
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="ud (.*)"))
-@telebot.on(sudo_cmd(pattern="ud (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="ud (.*)"))
+@ryoishin.on(sudo_cmd(pattern="ud (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

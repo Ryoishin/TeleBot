@@ -13,11 +13,11 @@ import time
 
 from telethon.tl.functions.channels import LeaveChannelRequest
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="bye", outgoing=True))
+@ryoishin.on(admin_cmd(pattern="bye", outgoing=True))
 async def leave(e):
     x = bot.me
     name = x.first_name

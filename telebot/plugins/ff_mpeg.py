@@ -4,14 +4,14 @@ import asyncio
 import os
 import time
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd, progress
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd, progress
 
 FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uniborg.media.ffmpeg"
 
 
-@telebot.on(admin_cmd(pattern="ffmpegsave"))
-@telebot.on(sudo_cmd(pattern="ffmpegsave", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="ffmpegsave"))
+@ryoishin.on(sudo_cmd(pattern="ffmpegsave", allow_sudo=True))
 async def ff_mpeg_trim_cmd(event):
     if event.fwd_from:
         return
@@ -50,8 +50,8 @@ async def ff_mpeg_trim_cmd(event):
         )
 
 
-@telebot.on(admin_cmd(pattern="ffmpegtrim"))
-@telebot.on(sudo_cmd(pattern="ffmpegtrim", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="ffmpegtrim"))
+@ryoishin.on(sudo_cmd(pattern="ffmpegtrim", allow_sudo=True))
 async def ff_mpeg_trim_cmd(event):
     if event.fwd_from:
         return

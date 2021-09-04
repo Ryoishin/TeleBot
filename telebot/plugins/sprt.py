@@ -6,11 +6,11 @@
 
 import asyncio
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="(.*)"))
-@telebot.on(sudo_cmd(pattern="(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="(.*)"))
+@ryoishin.on(sudo_cmd(pattern="(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

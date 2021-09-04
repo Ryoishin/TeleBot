@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 # (c) @INF1N17Y
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern=r"mention (.*)"))
-@telebot.on(sudo_cmd(pattern=r"mention (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"mention (.*)"))
+@ryoishin.on(sudo_cmd(pattern=r"mention (.*)", allow_sudo=True))
 async def _(event):
     x = await eor(event, "...")
     if event.fwd_from:

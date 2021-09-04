@@ -6,10 +6,10 @@ Available Commands:
 
 import asyncio
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="np"))
+@ryoishin.on(admin_cmd(pattern="np"))
 async def _(event):
     if event.fwd_from:
         return

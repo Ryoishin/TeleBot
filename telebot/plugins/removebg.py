@@ -21,12 +21,12 @@ from datetime import datetime
 
 import requests
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern=r"remove\.bg ?(.*)"))
-@telebot.on(sudo_cmd(pattern=r"remove\.bg ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"remove\.bg ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern=r"remove\.bg ?(.*)", allow_sudo=True))
 async def _(event):
     HELP_STR = "`.remove.bg` as reply to a media, or give a link as an argument to this command"
     if event.fwd_from:

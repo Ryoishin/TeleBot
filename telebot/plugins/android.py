@@ -10,8 +10,8 @@ import re
 from bs4 import BeautifulSoup
 from requests import get
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 GITHUB = "https://github.com"
 DEVICES_DATA = (
@@ -20,8 +20,8 @@ DEVICES_DATA = (
 )
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="magisk"))
-@telebot.on(sudo_cmd(pattern="magisk"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="magisk"))
+@ryoishin.on(sudo_cmd(pattern="magisk"))
 async def magisk(request):
     """ magisk latest releases """
     magisk_dict = {
@@ -41,8 +41,8 @@ async def magisk(request):
     await eor(request, releases)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"device(?: |$)(\S*)"))
-@telebot.on(sudo_cmd(pattern=r"device(?: |$)(\S*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"device(?: |$)(\S*)"))
+@ryoishin.on(sudo_cmd(pattern=r"device(?: |$)(\S*)"))
 async def device_info(request):
     """ get android device basic info from its codename """
     textx = await request.get_reply_message()
@@ -76,8 +76,8 @@ async def device_info(request):
     await eor(request, reply)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)"))
-@telebot.on(sudo_cmd(pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)"))
+@ryoishin.on(sudo_cmd(pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)"))
 async def codename_info(request):
     """ search for android codename """
     textx = await request.get_reply_message()
@@ -115,8 +115,8 @@ async def codename_info(request):
     await eor(request, reply)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
-@telebot.on(sudo_cmd(pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
+@ryoishin.on(sudo_cmd(pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
 async def devices_specifications(request):
     """ Mobile devices specifications """
     textx = await request.get_reply_message()
@@ -176,8 +176,8 @@ async def devices_specifications(request):
     await eor(request, reply)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"twrp(?: |$)(\S*)"))
-@telebot.on(sudo_cmd(pattern=r"twrp(?: |$)(\S*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"twrp(?: |$)(\S*)"))
+@ryoishin.on(sudo_cmd(pattern=r"twrp(?: |$)(\S*)"))
 async def twrp(request):
     """ get android device twrp """
     textx = await request.get_reply_message()

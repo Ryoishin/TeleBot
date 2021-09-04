@@ -21,7 +21,7 @@ from rextester_py import rexec
 from . import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="rex"))
+@ryoishin.on(admin_cmd(pattern="rex"))
 async def _(event):
     if event.fwd_from:
         return

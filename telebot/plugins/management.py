@@ -31,11 +31,11 @@ from telethon.tl.types import (
 )
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="unbanall ?(.*)"))
-@telebot.on(sudo_cmd(pattern="unbanall ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="unbanall ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="unbanall ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -65,8 +65,8 @@ async def _(event):
         await eor(event, "{}: {} unbanned".format(event.chat_id, p))
 
 
-@telebot.on(admin_cmd(pattern="skick ?(.*)"))
-@telebot.on(sudo_cmd(pattern="skick ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="skick ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="skick ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

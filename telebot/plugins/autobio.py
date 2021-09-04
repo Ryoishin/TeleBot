@@ -8,13 +8,13 @@ import time
 from telethon.errors import FloodWaitError
 from telethon.tl import functions
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 DEL_TIME_OUT = 60
 
 
-@telebot.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
+@ryoishin.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

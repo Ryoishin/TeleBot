@@ -2,11 +2,11 @@
 Syntax: .coronavirus <country>"""
 from covid import Covid
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="coronavirus (.*)"))
-@telebot.on(sudo_cmd(pattern="coronavirus (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="coronavirus (.*)"))
+@ryoishin.on(sudo_cmd(pattern="coronavirus (.*)", allow_sudo=True))
 async def _(event):
     covid = Covid()
     data = covid.get_data()

@@ -4,11 +4,11 @@ from datetime import datetime
 import requests
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="currency (.*)"))
-@telebot.on(sudo_cmd(pattern="currency (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="currency (.*)"))
+@ryoishin.on(sudo_cmd(pattern="currency (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -55,7 +55,7 @@ async def _(event):
     (end - start).seconds
 
 
-@telebot.on(admin_cmd(pattern="currencies (.*)"))
+@ryoishin.on(admin_cmd(pattern="currencies (.*)"))
 async def list(ups):
     if ups.fwd_from:
         return

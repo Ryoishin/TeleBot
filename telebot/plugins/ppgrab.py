@@ -6,7 +6,7 @@ import logging
 
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 logger = logging.getLogger(__name__)
 
@@ -15,8 +15,8 @@ if 1 == 1:
     name = "Profile Photos"
     client = borg
 
-    @telebot.on(admin_cmd(pattern="poto(.*)"))
-    @telebot.on(sudo_cmd(pattern="poto(.*)", allow_sudo=True))
+    @ryoishin.on(admin_cmd(pattern="poto(.*)"))
+    @ryoishin.on(sudo_cmd(pattern="poto(.*)", allow_sudo=True))
     async def potocmd(event):
         """Gets the profile photos of replied users, channels or chats"""
         id = "".join(event.raw_text.split(maxsplit=2)[1:])

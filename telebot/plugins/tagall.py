@@ -4,13 +4,13 @@
 
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 # Added to Ryoishin by @its_xditya
 
 
-@telebot.on(admin_cmd(pattern=r"administrator", outgoing=True))
-@telebot.on(sudo_cmd(pattern=r"administrator", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"administrator", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern=r"administrator", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -30,8 +30,8 @@ async def _(event):
 # Added to Ryoishin by @its_xditya
 
 
-@telebot.on(admin_cmd(pattern=r"tagall", outgoing=True))
-@telebot.on(sudo_cmd(pattern=r"tagall", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"tagall", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern=r"tagall", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

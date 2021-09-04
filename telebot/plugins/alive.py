@@ -7,9 +7,9 @@ from io import BytesIO
 import requests
 from PIL import Image
 
-from telebot import ALIVE_NAME, CMD_HELP, telever
-from telebot.__init__ import StartTime
-from telebot.telebotConfig import Config, Var
+from ryoishin import ALIVE_NAME, CMD_HELP, telever
+from ryoishin.__init__ import StartTime
+from ryoishin.ryoishinConfig import Config, Var
 
 # ======CONSTANTS=========#
 CUSTOM_ALIVE = (
@@ -57,8 +57,8 @@ def get_readable_time(seconds: int) -> str:
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@RyoishinSupport"
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="alive"))
-@telebot.on(sudo_cmd(outgoing=True, pattern="alive", allow_sudo=True))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="alive"))
+@ryoishin.on(sudo_cmd(outgoing=True, pattern="alive", allow_sudo=True))
 async def amireallyalive(alive):
     start = datetime.now()
     myid = bot.uid

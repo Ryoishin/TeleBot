@@ -11,8 +11,8 @@ from telethon.tl.types import InputMessagesFilterDocument
 from uniborg.util import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="srgb (.*)"))
-@telebot.on(sudo_cmd(pattern="srgb (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="srgb (.*)"))
+@ryoishin.on(sudo_cmd(pattern="srgb (.*)", allow_sudo=True))
 async def sticklet(event):
     R = random.randint(0, 256)
     G = random.randint(0, 256)

@@ -1,12 +1,12 @@
 import glob
-from telebot import bot
+from ryoishin import bot
 from sys import argv
 from telethon import TelegramClient
-from telebot.telebotConfig import Var
-from telebot.utils import load_module, start_mybot, load_pmbot
+from ryoishin.ryoishinConfig import Var
+from ryoishin.utils import load_module, start_mybot, load_pmbot
 from pathlib import Path
 import telethon.utils
-from telebot import CMD_HNDLR
+from ryoishin import CMD_HNDLR
 
 TELE = Var.PRIVATE_GROUP_ID
 BOTNAME = Var.TG_BOT_USER_NAME_BF_HER
@@ -44,7 +44,7 @@ else:
     else:
         bot.start()
 
-path = 'telebot/plugins/*.py'
+path = 'ryoishin/plugins/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -55,7 +55,7 @@ for name in files:
 print("Ryoishin has been deployed! ")
 
 print("Setting up TGBot")
-path = "telebot/plugins/mybot/*.py"
+path = "ryoishin/plugins/mybot/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -64,7 +64,7 @@ for name in files:
         start_mybot(shortname.replace(".py", ""))
 
 if LOAD_MYBOT == "True":
-    path = "telebot/plugins/mybot/pmbot/*.py"
+    path = "ryoishin/plugins/mybot/pmbot/*.py"
     files = glob.glob(path)
     for name in files:
         with open(name) as f:

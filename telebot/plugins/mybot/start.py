@@ -17,20 +17,20 @@
 # (c) @xditya
 
 import re
-from telebot.plugins.mybot import *
+from ryoishin.plugins.mybot import *
 from telethon import events, Button
 import heroku3
 import asyncio
 import os
 import requests
-from telebot.plugins.mybot.sql.blacklist_sql import all_bl_users
-from telebot.plugins import TELE_NAME
-from telebot.plugins.mybot.sql.userbase_sql import add_to_userbase, present_in_userbase, full_userbase
+from ryoishin.plugins.mybot.sql.blacklist_sql import all_bl_users
+from ryoishin.plugins import TELE_NAME
+from ryoishin.plugins.mybot.sql.userbase_sql import add_to_userbase, present_in_userbase, full_userbase
 from datetime import datetime
 from telethon import events
-from telebot.telebotConfig import Var, Config
+from ryoishin.ryoishinConfig import Var, Config
 from telegraph import Telegraph, upload_file
-from telebot import CUSTOM_PMPERMIT
+from ryoishin import CUSTOM_PMPERMIT
 
 ##################--CONSTANTS--##################
 LOAD_MYBOT = Var.LOAD_MYBOT
@@ -87,7 +87,7 @@ async def start_all(event):
                                       [Button.url(
                                           "Ryoishin", url="https://github.com/xditya/Ryoishin")],
                                       [Button.inline(
-                                          "Whats this?", data="telebot")]
+                                          "Whats this?", data="ryoishin")]
                                   ]
                                   )
         else:
@@ -97,7 +97,7 @@ async def start_all(event):
                                          [Button.url(
                                              "Ryoishin", url="https://github.com/xditya/Ryoishin")],
                                          [Button.inline(
-                                             "Whats this?", data="telebot")]
+                                             "Whats this?", data="ryoishin")]
                                      ]
                                      )
 
@@ -164,7 +164,7 @@ async def settings(event):
                              ])
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"telebot"))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ryoishin"))
           )  # pylint: disable=oof
 async def settings(event):
     await event.delete()
@@ -277,7 +277,7 @@ async def bot(event):
                 os.remove(media)
             except BaseException:
                 return await conv.send_message("Error!")
-        telebot = "BOT_PIC"
+        ryoishin = "BOT_PIC"
         if Var.HEROKU_APP_NAME is not None:
             app = Heroku.app(Var.HEROKU_APP_NAME)
         else:
@@ -285,7 +285,7 @@ async def bot(event):
             return
         xx = await tgbot.send_message(event.chat_id, "Changing your Bot Pic, please wait for a minute")
         heroku_var = app.config()
-        heroku_var[telebot] = f"{url}"
+        heroku_var[ryoishin] = f"{url}"
         mssg = f"Successfully changed your bot pic. Please wait for a minute.\n"
         await xx.edit(mssg)
     else:
@@ -304,14 +304,14 @@ async def custom(event):
             if themssg == "/cancel":
                 await tgbot.send_message(event.chat_id, "Operation Cancelled.")
                 return
-            telebot = "PMBOT_START_MSSG"
+            ryoishin = "PMBOT_START_MSSG"
             if Var.HEROKU_APP_NAME is not None:
                 app = Heroku.app(Var.HEROKU_APP_NAME)
             else:
                 mssg = "`**HEROKU**:" "\nPlease setup your` **HEROKU_APP_NAME**"
                 return
             heroku_var = app.config()
-            heroku_var[telebot] = f"{themssg}"
+            heroku_var[ryoishin] = f"{themssg}"
             mssg = "Changed the PMBot start message!!\n**Restarting now**, please give me a minute."
             await event.delete()
             await tgbot.send_message(event.chat_id, mssg)
@@ -323,14 +323,14 @@ async def custom(event):
           )  # pylint: disable=oof
 async def enablee(event):
     if event.sender_id == OWNER_ID:
-        telebot = "LOAD_MYBOT"
+        ryoishin = "LOAD_MYBOT"
         if Var.HEROKU_APP_NAME is not None:
             app = Heroku.app(Var.HEROKU_APP_NAME)
         else:
             mssg = "`**HEROKU**:" "\nPlease setup your` **HEROKU_APP_NAME**"
             return
         heroku_var = app.config()
-        heroku_var[telebot] = "True"
+        heroku_var[ryoishin] = "True"
         mssg = "Successfully turned on PM Bot. Restarting now, please give me a minute."
         await event.delete()
         await tgbot.send_message(event.chat_id, mssg)
@@ -342,14 +342,14 @@ async def enablee(event):
           )  # pylint: disable=oof
 async def dissable(event):
     if event.sender_id == OWNER_ID:
-        telebot = "LOAD_MYBOT"
+        ryoishin = "LOAD_MYBOT"
         if Var.HEROKU_APP_NAME is not None:
             app = Heroku.app(Var.HEROKU_APP_NAME)
         else:
             mssg = "`**HEROKU**:" "\nPlease setup your` **HEROKU_APP_NAME**"
             return
         heroku_var = app.config()
-        heroku_var[telebot] = "False"
+        heroku_var[ryoishin] = "False"
         mssg = "Successfully turned off PM Bot. Restarting now, please give me a minute."
         await event.delete()
         await tgbot.send_message(event.chat_id, mssg)
@@ -428,7 +428,7 @@ async def a_txt(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
         old_alv=Var.CUSTOM_ALIVE if Var.CUSTOM_ALIVE else "Default Alive message"
-        telebot="CUSTOM_ALIVE"
+        ryoishin="CUSTOM_ALIVE"
         if Var.HEROKU_APP_NAME is not None:
             app=Heroku.app(Var.HEROKU_APP_NAME)
         else:
@@ -446,7 +446,7 @@ async def a_txt(event):
                 return await conv.send_message("Cancelled!!")
             heroku_var=app.config()
             xx = await tgbot.send_message(event.chat_id, "Changing your Alive Message, please wait for a minute")
-            heroku_var[telebot]=f"{themssg}"
+            heroku_var[ryoishin]=f"{themssg}"
             mssg=f"Changed your alive text from\n`{old_alv}`\nto\n`{themssg}`\n"
             await xx.edit(mssg)
     else:
@@ -475,7 +475,7 @@ async def alv_pic(event):
                 os.remove(media)
             except BaseException:
                 return await conv.send_message("Error!")
-        telebot="ALIVE_PIC"
+        ryoishin="ALIVE_PIC"
         if Var.HEROKU_APP_NAME is not None:
             app=Heroku.app(Var.HEROKU_APP_NAME)
         else:
@@ -483,7 +483,7 @@ async def alv_pic(event):
             return
         xx = await tgbot.send_message(event.chat_id, "Changing your Alive Pic, please wait for a minute")
         heroku_var=app.config()
-        heroku_var[telebot]=f"{url}"
+        heroku_var[ryoishin]=f"{url}"
         mssg=f"Successfully changed your alive pic. Please wait for a minute.\n"
         await xx.edit(mssg)
     else:
@@ -502,7 +502,7 @@ async def a_txt(event):
     if event.sender_id == OWNER_ID:
         await event.delete()
         old_alv= CUSTOM_PMPERMIT if CUSTOM_PMPERMIT else "Default PMSecurity message"
-        telebot="CUSTOM_PMPERMIT"
+        ryoishin="CUSTOM_PMPERMIT"
         if Var.HEROKU_APP_NAME is not None:
             app=Heroku.app(Var.HEROKU_APP_NAME)
         else:
@@ -520,7 +520,7 @@ async def a_txt(event):
                 await conv.send_message("Cancelled!!")
             heroku_var=app.config()
             xx = await tgbot.send_message(event.chat_id, "Changing your PMSecurity Message, please wait for a minute")
-            heroku_var[telebot]=f"{themssg}"
+            heroku_var[ryoishin]=f"{themssg}"
             mssg=f"Changed your PMsecurity Message from\n`{old_alv}`\nto\n`{themssg}`\n"
             await xx.edit(mssg)
     else:
@@ -549,7 +549,7 @@ async def alv_pic(event):
                 os.remove(media)
             except BaseException:
                 return await conv.send_message("Error!")
-        telebot="PMPERMIT_PIC"
+        ryoishin="PMPERMIT_PIC"
         if Var.HEROKU_APP_NAME is not None:
             app=Heroku.app(Var.HEROKU_APP_NAME)
         else:
@@ -557,7 +557,7 @@ async def alv_pic(event):
             return
         xx = await tgbot.send_message(event.chat_id, "Changing your PMSecurity Pic, please wait for a minute")
         heroku_var=app.config()
-        heroku_var[telebot]=f"{url}"
+        heroku_var[ryoishin]=f"{url}"
         mssg=f"Successfully changed your PMSecurity pic. Please wait for a minute.\n"
         await xx.edit(mssg)
     else:

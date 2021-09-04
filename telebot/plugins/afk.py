@@ -28,8 +28,8 @@ from telegraph import Telegraph, upload_file
 from telethon import Button, events
 from telethon.tl import functions, types
 
-from telebot import CMD_HELP
-from telebot.telebotConfig import Config, Var
+from ryoishin import CMD_HELP
+from ryoishin.ryoishinConfig import Config, Var
 
 # --=============================================--#
 global USER_AFK  # pylint:disable=E0602
@@ -58,7 +58,7 @@ auth_url = r["auth_url"]
 # --=============================================--#
 
 
-@telebot.on(
+@ryoishin.on(
     events.NewMessage(incoming=True, func=lambda e: bool(e.mentioned or e.is_private))
 )
 async def on_afk(event):
@@ -130,13 +130,13 @@ async def on_afk(event):
                         ],
                     )
                 except BaseException:
-                    await telebot.send_message(
+                    await ryoishin.send_message(
                         Var.PRIVATE_GROUP_ID,
                         f"Please add {MYBOT} here for afk tags to work.",
                     )
 
 
-@telebot.on(admin_cmd(pattern=r"afk ?(.*)"))
+@ryoishin.on(admin_cmd(pattern=r"afk ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -157,7 +157,7 @@ async def _(event):
     if not USER_AFK:
         if event.reply_to_msg_id:
             reply_message = await event.get_reply_message()
-            media = await telebot.download_media(reply_message, "AFK_media")
+            media = await ryoishin.download_media(reply_message, "AFK_media")
             try:
                 url = upload_file(media)
                 os.remove(media)
@@ -206,7 +206,7 @@ async def _(event):
                 )
 
 
-@telebot.on(events.NewMessage(outgoing=True))
+@ryoishin.on(events.NewMessage(outgoing=True))
 async def set_not_afk(event):
     global USER_AFK
     global afk_time

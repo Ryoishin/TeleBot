@@ -8,11 +8,11 @@
 
 import asyncio
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="info"))
-@telebot.on(sudo_cmd(pattern="info", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="info"))
+@ryoishin.on(sudo_cmd(pattern="info", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

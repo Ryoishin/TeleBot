@@ -16,8 +16,8 @@
 
 import os
 
-from telebot import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
-from telebot.telebotConfig import Config
+from ryoishin import ALIVE_NAME, CMD_HELP, CMD_HNDLR, CMD_LIST
+from ryoishin.ryoishinConfig import Config
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin User"
 CMD_HNDLR = Config.CMD_HNDLR
@@ -27,7 +27,7 @@ if CMD_HNDLR is None:
     CMD_HNDLR = "."
 
 
-@telebot.on(admin_cmd(pattern="help ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="help ?(.*)"))
 async def cmd_list(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
@@ -71,7 +71,7 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = f"""`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**[Ryoishin](https://xditya.gitbook.io/telebot/)**\n\n"""
+            help_string = f"""`Userbot Helper for {DEFAULTUSER} to reveal all the commands of `**[Ryoishin](https://xditya.gitbook.io/ryoishin/)**\n\n"""
             try:
                 results = await bot.inline_query(  # pylint:disable=E0602
                     tgbotusername, help_string

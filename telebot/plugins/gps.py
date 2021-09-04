@@ -10,12 +10,12 @@ credits :@mrconfused
 from geopy.geocoders import Nominatim
 from telethon.tl import types
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="gps ?(.*)"))
-@telebot.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="gps ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
 async def gps(event):
     if event.fwd_from:
         return
@@ -29,7 +29,7 @@ async def gps(event):
 
     await eor(event, "Finding...")
 
-    geolocator = Nominatim(user_agent="telebot")
+    geolocator = Nominatim(user_agent="ryoishin")
     geoloc = geolocator.geocode(input_str)
 
     if geoloc:

@@ -12,8 +12,8 @@ import random
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from telebot import ALIVE_NAME
-from telebot.utils import admin_cmd
+from ryoishin import ALIVE_NAME
+from ryoishin.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@jiNikuttan"
 
@@ -146,8 +146,8 @@ HATE_STRINGS = [
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Sur_vivor"
 
 
-@telebot.on(admin_cmd(pattern="mslap ?(.*)"))
-@telebot.on(sudo_cmd(pattern="mslap ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="mslap ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="mslap ?(.*)", allow_sudo=True))
 async def who(event):
     if event.fwd_from:
         return
@@ -213,48 +213,48 @@ async def slap(replied_user, event):
     return caption
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="mrape"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="mrape"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="mrape"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="mrape"))
 async def raping(raped):
     index = random.randint(0, len(RAPE_STRINGS) - 1)
     reply_text = RAPE_STRINGS[index]
     await raped.edit(reply_text)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="mshe"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="mshe"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="mshe"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="mshe"))
 async def thanos(thanos):
     index = random.randint(0, len(THANOS_STRINGS) - 1)
     reply_text = THANOS_STRINGS[index]
     await thanos.edit(reply_text)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="mabuse"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="mabuse"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="mabuse"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="mabuse"))
 async def fuckedd(abusehard):
     index = random.randint(0, len(ABUSEHARD_STRING) - 1)
     reply_text = ABUSEHARD_STRING[index]
     await abusehard.edit(reply_text)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="mruns"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="mruns"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="mruns"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="mruns"))
 async def fuckedd(abusehard):
     index = random.randint(0, len(RUNSREACTS) - 1)
     reply_text = RUNSREACTS[index]
     await abusehard.edit(reply_text)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="minsult$"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="minsult$"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="minsult$"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="minsult$"))
 async def proo(pros):
     index = random.randint(0, len(PRO_STRINGS) - 1)
     reply_text = PRO_STRINGS[index]
     await pros.edit(reply_text)
 
 
-@telebot.on(admin_cmd(pattern=r"foryou$", outgoing=True))
-@telebot.on(sudo_cmd(pattern=r"foryou$", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"foryou$", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern=r"foryou$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -489,8 +489,8 @@ async def _(event):
         )
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="kozhi"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="kozhi"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="kozhi"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="kozhi"))
 async def hating(hated):
     index = random.randint(0, len(HATE_STRINGS) - 1)
     reply_text = HATE_STRINGS[index]

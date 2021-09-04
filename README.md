@@ -17,7 +17,7 @@ Click the below button to watch the video tutorial on deploying
     
     
 ## Documentation
-For passionate readers 😂 the documentation can be found [here](https://xditya.gitbook.io/telebot/)
+For passionate readers 😂 the documentation can be found [here](https://xditya.gitbook.io/ryoishin/)
 
 ## The Easier Way to install
 
@@ -28,7 +28,7 @@ Join [Ryoishin Support group](https://t.me/RyoishinSupport) for updates and new 
 Do fork and star the repo 
 
 ### Session String 
-<a href="https://repl.it/@xditya/telebot#main.py" target="_blank"><img src="https://img.shields.io/badge/run-string__session.py-red?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>    
+<a href="https://repl.it/@xditya/ryoishin#main.py" target="_blank"><img src="https://img.shields.io/badge/run-string__session.py-red?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>    
 Alternative sites can be found [here](https://t.me/RyoishinHelpChat/272145), incase the top one doesn't work.
 
 ### The Normal Way
@@ -41,7 +41,7 @@ virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
 # <Create local_config.py with variables as given below>
-python3 -m telebot
+python3 -m ryoishin
 ```
 
 An example `local_config.py` file could be:

@@ -2,11 +2,11 @@
 Syntax: .schd <time_in_seconds> ;=; <message to send>"""
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="schd ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="schd ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

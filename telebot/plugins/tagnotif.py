@@ -20,14 +20,14 @@ from telethon import custom, events
 from telethon.tl.types import Channel
 from telethon.utils import get_display_name
 
-from telebot.telebotConfig import Config
+from ryoishin.ryoishinConfig import Config
 
 if Config.TAG_LOG:
     NEEDTOLOG = int(Config.TAG_LOG)
 
 if Config.TAG_LOG:
 
-    @telebot.on(
+    @ryoishin.on(
         events.NewMessage(
             incoming=True,
             blacklist_chats=Config.UB_BLACK_LIST_CHAT,

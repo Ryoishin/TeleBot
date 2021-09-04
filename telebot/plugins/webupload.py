@@ -2,15 +2,15 @@
 import asyncio
 import time
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(
+@ryoishin.on(
     admin_cmd(
         pattern="webupload ?(.+?|) (?:--)(anonfiles|transfer|filebin|anonymousfiles|megaupload|bayfiles)"
     )
 )
-@telebot.on(
+@ryoishin.on(
     sudo_cmd(
         pattern="webupload ?(.+?|) (?:--)(anonfiles|transfer|filebin|anonymousfiles|megaupload|bayfiles)",
         allow_sudo=True,

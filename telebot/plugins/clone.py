@@ -21,7 +21,7 @@ else:
     BOTLOG_CHATID = Var.PRIVATE_GROUP_ID
 
 
-@telebot.on(admin_cmd(pattern="clone ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="clone ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -71,7 +71,7 @@ async def _(event):
         )
 
 
-@telebot.on(admin_cmd(pattern="revert$"))
+@ryoishin.on(admin_cmd(pattern="revert$"))
 async def _(event):
     if event.fwd_from:
         return

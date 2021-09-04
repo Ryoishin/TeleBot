@@ -4,12 +4,12 @@ import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="gbun"))
-@telebot.on(sudo_cmd(pattern="gbun", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="gbun"))
+@ryoishin.on(sudo_cmd(pattern="gbun", allow_sudo=True))
 async def gbun(event):
     if event.fwd_from:
         return

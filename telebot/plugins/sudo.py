@@ -24,7 +24,7 @@ heroku_api = "https://api.heroku.com"
 sudousers = os.environ.get("SUDO_USERS", None)
 
 
-@telebot.on(admin_cmd(pattern="sudo"))
+@ryoishin.on(admin_cmd(pattern="sudo"))
 async def sudo(event):
     sudo = "True" if Config.SUDO_USERS else "False"
     users = os.environ.get("SUDO_USERS", None)
@@ -34,7 +34,7 @@ async def sudo(event):
         await eor(event, f"**Ryoishin**\nSudo - `Disabled`")
 
 
-@telebot.on(admin_cmd(pattern="prefix"))
+@ryoishin.on(admin_cmd(pattern="prefix"))
 async def handler(event):
     hndlr = Config.CMD_HNDLR
     if hndlr == r"\.":
@@ -46,10 +46,10 @@ async def handler(event):
     await eor(event, f"Command Handler - {x}\nSudo Handler - {sudohndlr}")
 
 
-@telebot.on(admin_cmd(pattern="addsudo(?: |$)"))
+@ryoishin.on(admin_cmd(pattern="addsudo(?: |$)"))
 async def tb(event):
     ok = await eor(event, "Adding user as a sudo...")
-    telebot = "SUDO_USERS"
+    ryoishin = "SUDO_USERS"
     if Var.HEROKU_APP_NAME is not None:
         app = Heroku.app(Var.HEROKU_APP_NAME)
     else:
@@ -67,7 +67,7 @@ async def tb(event):
     else:
         newsudo = f"{target}"
     await ok.edit(f"Added `{target}` as a sudo user. Restarting.. Give me a minute...")
-    heroku_var[telebot] = newsudo
+    heroku_var[ryoishin] = newsudo
 
 
 async def get_user(event):

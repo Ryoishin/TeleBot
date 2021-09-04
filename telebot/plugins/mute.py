@@ -1,12 +1,12 @@
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"mute ?(\d+)?"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"mute ?(\d+)?"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"mute ?(\d+)?"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"mute ?(\d+)?"))
 async def startmute(event):
     private = False
     if event.fwd_from:
@@ -52,8 +52,8 @@ async def startmute(event):
         await eor(event, "Successfully muted that person")
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"unmute ?(\d+)?"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"unmute ?(\d+)?"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"unmute ?(\d+)?"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"unmute ?(\d+)?"))
 async def endmute(event):
     private = False
     if event.fwd_from:
@@ -85,7 +85,7 @@ async def endmute(event):
         await eor(event, "Successfully unmuted that person")
 
 
-@telebot.on(admin_cmd(incoming=True))
+@ryoishin.on(admin_cmd(incoming=True))
 async def watcher(event):
     if is_muted(event.sender_id, event.chat_id):
         await event.delete()

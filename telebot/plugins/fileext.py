@@ -4,11 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="filext (.*)"))
-@telebot.on(admin_cmd(pattern="filext (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="filext (.*)"))
+@ryoishin.on(admin_cmd(pattern="filext (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

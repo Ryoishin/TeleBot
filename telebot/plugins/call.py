@@ -12,11 +12,11 @@ Available Commands:
 
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern=r"(.*)", outgoing=True))
+@ryoishin.on(admin_cmd(pattern=r"(.*)", outgoing=True))
 async def _(event):
 
     if event.fwd_from:

@@ -10,12 +10,12 @@ import pygments
 from pygments.formatters import ImageFormatter
 from pygments.lexers import Python3Lexer
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd, sudo_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd, sudo_cmd
 
 
-@telebot.on(admin_cmd(pattern=r"ncode"))
-@telebot.on(sudo_cmd(pattern=r"ncode", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"ncode"))
+@ryoishin.on(sudo_cmd(pattern=r"ncode", allow_sudo=True))
 async def coder_print(event):
     a = await event.client.download_media(
         await event.get_reply_message(), Var.TEMP_DOWNLOAD_DIRECTORY

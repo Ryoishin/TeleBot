@@ -5,12 +5,12 @@ import io
 import sys
 import traceback
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="calc"))
-@telebot.on(sudo_cmd(pattern="calc", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="calc"))
+@ryoishin.on(sudo_cmd(pattern="calc", allow_sudo=True))
 async def _(event):
     if event.fwd_from or event.via_bot_id:
         return

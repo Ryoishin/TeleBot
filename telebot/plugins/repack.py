@@ -7,12 +7,12 @@
 import asyncio
 import os
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd, sudo_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd, sudo_cmd
 
 
-@telebot.on(admin_cmd(pattern="repack ?(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern="repack ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="repack ?(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="repack ?(.*)", allow_sudo=True))
 async def _(event):
     a = await event.get_reply_message()
     input_str = event.pattern_match.group(1)

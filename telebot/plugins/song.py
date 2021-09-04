@@ -35,10 +35,10 @@ from youtube_dl.utils import (
 )
 from youtubesearchpython import SearchVideos
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="song (.*)"))
+@ryoishin.on(admin_cmd(pattern="song (.*)"))
 async def download_video(tele):
     x = await eor(tele, "Searching...")
     url = tele.pattern_match.group(1)
@@ -109,7 +109,7 @@ async def download_video(tele):
         return
     try:
         sung = str(pybase64.b64decode("QFRlbGVCb3RIZWxw"))[2:14]
-        await telebot(JoinChannelRequest(sung))
+        await ryoishin(JoinChannelRequest(sung))
     except BaseException:
         pass
     upteload = """
@@ -120,7 +120,7 @@ By - {}
         rip_data["title"], rip_data["uploader"]
     )
     await x.edit(f"`{upteload}`")
-    await telebot.send_file(
+    await ryoishin.send_file(
         tele.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
@@ -136,7 +136,7 @@ By - {}
     os.remove(f"{rip_data['id']}.mp3")
 
 
-@telebot.on(admin_cmd(pattern="vsong (.*)"))
+@ryoishin.on(admin_cmd(pattern="vsong (.*)"))
 async def download_video(tele):
     x = await eor(tele, "Processing..")
     url = tele.pattern_match.group(1)
@@ -202,7 +202,7 @@ async def download_video(tele):
         return
     try:
         sung = str(pybase64.b64decode("QFRlbGVCb3RIZWxw"))[2:14]
-        await telebot(JoinChannelRequest(sung))
+        await ryoishin(JoinChannelRequest(sung))
     except BaseException:
         pass
     upteload = """
@@ -213,7 +213,7 @@ By - {}
         rip_data["title"], rip_data["uploader"]
     )
     await x.edit(f"`{upteload}`")
-    await telebot.send_file(
+    await ryoishin.send_file(
         tele.chat_id,
         f"{rip_data['id']}.mp4",
         supports_streaming=True,

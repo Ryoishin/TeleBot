@@ -3,12 +3,12 @@ Syntax: .invite <User(s)>"""
 
 from telethon import functions
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="invite ?(.*)"))
-@telebot.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="invite ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

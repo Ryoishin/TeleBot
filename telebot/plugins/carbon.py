@@ -13,15 +13,15 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
-from telebot import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN
-from telebot.utils import admin_cmd, sudo_cmd
+from ryoishin import CHROME_DRIVER, CMD_HELP, GOOGLE_CHROME_BIN
+from ryoishin.utils import admin_cmd, sudo_cmd
 
 CARBONLANG = "auto"
 LANG = "en"
 
 
-@telebot.on(admin_cmd(pattern="carbon"))
-@telebot.on(sudo_cmd(pattern="carbon", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="carbon"))
+@ryoishin.on(sudo_cmd(pattern="carbon", allow_sudo=True))
 async def carbon_api(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
 

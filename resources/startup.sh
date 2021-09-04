@@ -30,4 +30,4 @@ echo "
                                                                                                                                                          
 "
 
-python -m telebot
+python -m ryoishin

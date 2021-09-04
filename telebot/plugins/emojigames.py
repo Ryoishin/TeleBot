@@ -3,11 +3,11 @@
 
 from telethon.tl.types import InputMediaDice
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="dice(?: |$)(.*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="dice(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -24,7 +24,7 @@ async def _(event):
             pass
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="dart(?: |$)(.*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="dart(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -41,7 +41,7 @@ async def _(event):
             pass
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="bb(?: |$)(.*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="bb(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return

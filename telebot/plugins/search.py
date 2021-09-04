@@ -14,12 +14,12 @@ from re import findall
 import requests
 from search_engine_parser import GoogleSearch
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"gs (.*)"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"gs (.*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"gs (.*)"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"gs (.*)"))
 async def gsearch(q_event):
     """ For .google command, do a Google search from @RyoishinHelp. """
     match = q_event.pattern_match.group(1)
@@ -49,8 +49,8 @@ async def gsearch(q_event):
     )
 
 
-@telebot.on(admin_cmd("duckduckgo (.*)"))
-@telebot.on(sudo_cmd("duckduckgo (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd("duckduckgo (.*)"))
+@ryoishin.on(sudo_cmd("duckduckgo (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -66,8 +66,8 @@ async def _(event):
         await eor(event, "something is wrong. please try again later.")
 
 
-@telebot.on(admin_cmd(pattern="ggl (.*)"))
-@telebot.on(sudo_cmd(pattern="ggl (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="ggl (.*)"))
+@ryoishin.on(sudo_cmd(pattern="ggl (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

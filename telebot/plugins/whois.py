@@ -26,12 +26,12 @@ from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 TMP_DOWNLOAD_DIRECTORY = "./"
 
 
-@telebot.on(admin_cmd(pattern="whois(?: |$)(.*)"))
+@ryoishin.on(admin_cmd(pattern="whois(?: |$)(.*)"))
 async def who(event):
     """ For .whois command, get info about a user. """
     if event.fwd_from:

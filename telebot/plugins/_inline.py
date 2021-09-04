@@ -23,9 +23,9 @@ from math import ceil
 from telethon import Button, custom, events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-from telebot import ALIVE_NAME, CMD_HELP, CMD_LIST, CUSTOM_PMPERMIT, bot
-from telebot.plugins import telestats
-from telebot.telebotConfig import Var
+from ryoishin import ALIVE_NAME, CMD_HELP, CMD_LIST, CUSTOM_PMPERMIT, bot
+from ryoishin.plugins import telestats
+from ryoishin.ryoishinConfig import Var
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (

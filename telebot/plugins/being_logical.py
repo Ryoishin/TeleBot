@@ -8,11 +8,11 @@ Quotes credits: Being logical Channel
 import asyncio
 import random
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern=r"belo", outgoing=True))
-@telebot.on(sudo_cmd(pattern=r"belo"))
+@ryoishin.on(admin_cmd(pattern=r"belo", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern=r"belo"))
 async def _(event):
 
     if event.fwd_from:

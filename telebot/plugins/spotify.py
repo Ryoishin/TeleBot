@@ -8,7 +8,7 @@ from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.tl.types import InputMessagesFilterMusic
 
-from telebot.plugins import OWNER_ID, TELE_NAME
+from ryoishin.plugins import OWNER_ID, TELE_NAME
 
 from . import CMD_HELP
 
@@ -18,7 +18,7 @@ PROF = f"[{TELE_NAME}](tg://user?id={OWNER_ID})"
 @borg.on(admin_cmd("spotify ?(.*)"))
 async def _(event):
     try:
-        await telebot(ImportChatInviteRequest("DdR2SUvJPBouSW4QlbJU4g"))
+        await ryoishin(ImportChatInviteRequest("DdR2SUvJPBouSW4QlbJU4g"))
     except UserAlreadyParticipantError:
         pass
     except Exception as e:
@@ -40,12 +40,12 @@ async def _(event):
 ⫸ **Uploaded by** {}
 """
     try:
-        async for event in telebot.iter_messages(
+        async for event in ryoishin.iter_messages(
             chat, search=name, limit=1, filter=InputMessagesFilterMusic
         ):
             ok = cap.format(event.message, PROF)
-            await telebot.delete_messages(current_chat, current_msg)
-            await telebot.send_file(current_chat, event, caption=ok)
+            await ryoishin.delete_messages(current_chat, current_msg)
+            await ryoishin.send_file(current_chat, event, caption=ok)
     except BaseException:
         await event.reply(
             f"`Song, {name}, not found. For better results, use Artist Name -Song Name.`"

@@ -1,10 +1,10 @@
 """Plugin to get the video tutorial to deploy Ryoishin
 .tut"""
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="tut"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="tut"))
 async def join(e):
 
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):

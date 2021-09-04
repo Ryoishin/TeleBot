@@ -9,11 +9,11 @@ import subprocess
 
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern=r"getc"))
-@telebot.on(sudo_cmd(pattern=r"getc", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"getc"))
+@ryoishin.on(sudo_cmd(pattern=r"getc", allow_sudo=True))
 async def get_media(event):
     if event.fwd_from:
         return
@@ -43,7 +43,7 @@ async def get_media(event):
     await eor(event, "Downloaded " + output + " files.")
 
 
-@telebot.on(admin_cmd(pattern=r"geta"))
+@ryoishin.on(admin_cmd(pattern=r"geta"))
 async def get_media(event):
     if event.fwd_from:
         return

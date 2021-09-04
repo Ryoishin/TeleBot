@@ -9,14 +9,14 @@ from datetime import datetime
 
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
-from telebot.telebotConfig import Config
+from ryoishin import CMD_HELP
+from ryoishin.ryoishinConfig import Config
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 
 
-@telebot.on(admin_cmd(pattern="rename (.*)"))
-@telebot.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="rename (.*)"))
+@ryoishin.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

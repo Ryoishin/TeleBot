@@ -7,11 +7,11 @@ import time
 
 import aiohttp
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="weathers (.*)"))
-@telebot.on(sudo_cmd(pattern="weathers (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="weathers (.*)"))
+@ryoishin.on(sudo_cmd(pattern="weathers (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -58,7 +58,7 @@ async def _(event):
         await eor(event, response_api["message"])
 
 
-@telebot.on(admin_cmd(pattern="wttr (.*)"))
+@ryoishin.on(admin_cmd(pattern="wttr (.*)"))
 async def _(event):
     if event.fwd_from:
         return

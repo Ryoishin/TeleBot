@@ -7,14 +7,14 @@ import os
 import lyricsgenius
 from tswift import Song
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 GENIUS = os.environ.get("GENIUS_API_TOKEN", None)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="lyrics ?(.*)"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="lyrics ?(.*)"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="lyrics ?(.*)"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="lyrics ?(.*)"))
 async def _(event):
     await eor(event, "wi8..! I am searching your lyrics....`")
     reply_to_id = event.message.id
@@ -53,8 +53,8 @@ async def _(event):
         await eor(event, reply)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="glyrics ?(.*)"))
-@telebot.on(sudo_cmd(outgoing=True, pattern="glyrics ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="glyrics ?(.*)"))
+@ryoishin.on(sudo_cmd(outgoing=True, pattern="glyrics ?(.*)", allow_sudo=True))
 async def lyrics(lyric):
     if lyric.pattern_match.group(1):
         query = lyric.pattern_match.group(1)

@@ -12,13 +12,13 @@ import bs4
 import requests
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 langi = "en"
 
 
-@telebot.on(admin_cmd(pattern="imdb (.*)"))
-@telebot.on(sudo_cmd(pattern="imdb (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="imdb (.*)"))
+@ryoishin.on(sudo_cmd(pattern="imdb (.*)", allow_sudo=True))
 async def imdb(e):
     abcd = await eor(e, "`Searching for the movie...`")
     try:

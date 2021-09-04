@@ -7,13 +7,13 @@ from datetime import datetime
 
 from selenium import webdriver
 
-from telebot import CMD_HELP
-from telebot.telebotConfig import Config
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.ryoishinConfig import Config
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="screenlong (.*)"))
-@telebot.on(sudo_cmd(pattern="screenlong (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="screenlong (.*)"))
+@ryoishin.on(sudo_cmd(pattern="screenlong (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

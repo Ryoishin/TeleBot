@@ -6,12 +6,12 @@ Available Commands:
 .unshort <short url>"""
 import requests
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="dns (.*)"))
-@telebot.on(sudo_cmd(pattern="dns (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="dns (.*)"))
+@ryoishin.on(sudo_cmd(pattern="dns (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -24,8 +24,8 @@ async def _(event):
         await eor(event, "i can't seem to find {} on the internet".format(input_str))
 
 
-@telebot.on(admin_cmd(pattern="url (.*)"))
-@telebot.on(sudo_cmd(pattern="url (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="url (.*)"))
+@ryoishin.on(sudo_cmd(pattern="url (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -38,8 +38,8 @@ async def _(event):
         await eor(event, "something is wrong. please try again later.")
 
 
-@telebot.on(admin_cmd(pattern="unshort (.*)"))
-@telebot.on(sudo_cmd(pattern="unshort (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="unshort (.*)"))
+@ryoishin.on(sudo_cmd(pattern="unshort (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

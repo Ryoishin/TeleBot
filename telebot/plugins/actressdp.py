@@ -13,7 +13,7 @@ import urllib
 import requests
 from telethon.tl import functions
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 COLLECTION_STRING = [
     "indian-actress-wallpapers",
@@ -52,7 +52,7 @@ async def animepp():
     urllib.request.urlretrieve(fy, "donottouch.jpg")
 
 
-@telebot.on(admin_cmd(pattern="actressdp ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="actressdp ?(.*)"))
 async def main(event):
 
     await event.edit(

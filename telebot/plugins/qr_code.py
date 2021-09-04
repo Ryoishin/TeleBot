@@ -19,8 +19,8 @@ def progress(current, total):
     )
 
 
-@telebot.on(admin_cmd(pattern="getqr"))
-@telebot.on(sudo_cmd(pattern="getqr", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="getqr"))
+@ryoishin.on(sudo_cmd(pattern="getqr", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -68,8 +68,8 @@ async def _(event):
     await eor(event, qr_contents)
 
 
-@telebot.on(admin_cmd(pattern="makeqr ?(.*)"))
-@telebot.on(sudo_cmd(pattern="makeqr ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="makeqr ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="makeqr ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

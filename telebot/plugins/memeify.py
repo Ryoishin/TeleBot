@@ -8,11 +8,11 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="mmf ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="mmf ?(.*)"))
 async def handler(event):
     if event.fwd_from:
         return

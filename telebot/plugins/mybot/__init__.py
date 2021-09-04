@@ -14,10 +14,10 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from telebot.plugins import OWNER_ID, TELE_NAME
+from ryoishin.plugins import OWNER_ID, TELE_NAME
 import time
 from datetime import datetime
-from telebot.telebotConfig import Var
+from ryoishin.ryoishinConfig import Var
 
 # start-other disabled
 startotherdis = """

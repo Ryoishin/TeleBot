@@ -19,7 +19,7 @@ import requests
 from . import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="grpcnt ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="grpcnt ?(.*)"))
 async def counter(tele):
     chat = tele.pattern_match.group(1)
     if not tele.is_private:

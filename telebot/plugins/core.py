@@ -21,8 +21,8 @@ from pathlib import Path
 
 from telethon.tl.types import InputMessagesFilterDocument
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd, load_module, remove_plugin
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd, load_module, remove_plugin
 
 from .. import ALIVE_NAME
 
@@ -31,8 +31,8 @@ thumb_image_path = "./resources/Ryoishin.jpeg"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin User"
 
 
-@telebot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
-@telebot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
 async def send(event):
     ok = await eor(event, "Sending...")
     if event.fwd_from:
@@ -41,7 +41,7 @@ async def send(event):
     message_id = event.message.id
     thumb = thumb_image_path
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./telebot/plugins/{}.py".format(input_str)
+    the_plugin_file = "./ryoishin/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         await ok.delete()
         start = datetime.now()
@@ -63,7 +63,7 @@ async def send(event):
         await ok.edit("**404**: `No Such Plugin!`")
 
 
-@telebot.on(admin_cmd(pattern="install"))
+@ryoishin.on(admin_cmd(pattern="install"))
 async def install(event):
     if event.fwd_from:
         return
@@ -72,7 +72,7 @@ async def install(event):
             downloaded_file_name = (
                 await event.client.download_media(  # pylint:disable=E0602
                     await event.get_reply_message(),
-                    "telebot/plugins/",  # pylint:disable=E0602
+                    "ryoishin/plugins/",  # pylint:disable=E0602
                 )
             )
             if "(" not in downloaded_file_name:
@@ -96,7 +96,7 @@ async def install(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
+@ryoishin.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
 async def unload(event):
     if event.fwd_from:
         return
@@ -112,7 +112,7 @@ async def unload(event):
         )
 
 
-@telebot.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
+@ryoishin.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
 async def load(event):
     if event.fwd_from:
         return
@@ -130,7 +130,7 @@ async def load(event):
         )
 
 
-@telebot.on(admin_cmd(pattern=r"installall$"))
+@ryoishin.on(admin_cmd(pattern=r"installall$"))
 async def install(event):
     if event.fwd_from:
         return
@@ -152,7 +152,7 @@ async def install(event):
     for ixo in total_doxx:
         mxo = documentss[ixo].id
         downloaded_file_name = await event.client.download_media(
-            await event.client.get_messages(event.chat_id, ids=mxo), "telebot/plugins/"
+            await event.client.get_messages(event.chat_id, ids=mxo), "ryoishin/plugins/"
         )
         if "(" not in downloaded_file_name:
             path1 = Path(downloaded_file_name)

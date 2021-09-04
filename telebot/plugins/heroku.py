@@ -13,13 +13,13 @@ import os
 import heroku3
 import requests
 
-from telebot import CMD_HELP, CMD_HNDLR
+from ryoishin import CMD_HELP, CMD_HNDLR
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 
 
-@telebot.on(admin_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
+@ryoishin.on(admin_cmd(pattern=r"(set|get|del) var (.*)", outgoing=True))
 async def variable(var):
     """
     Manage most of ConfigVars setting, set new var, get current var,
@@ -98,8 +98,8 @@ async def variable(var):
             return await toput.edit(f"`{variable}`** doesn't exist**")
 
 
-@telebot.on(admin_cmd(pattern="usage"))
-@telebot.on(sudo_cmd(pattern="usage", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="usage"))
+@ryoishin.on(sudo_cmd(pattern="usage", allow_sudo=True))
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
@@ -157,8 +157,8 @@ async def dyno_usage(dyno):
     )
 
 
-@telebot.on(admin_cmd(pattern="info heroku"))
-@telebot.on(sudo_cmd(pattern="info heroku", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="info heroku"))
+@ryoishin.on(sudo_cmd(pattern="info heroku", allow_sudo=True))
 async def info(event):
     await borg.send_message(
         event.chat_id,
@@ -181,8 +181,8 @@ def prettyjson(obj, indent=2, maxlinelength=80):
     return indentitems(items, indent, level=0)
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern=r"logs"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern=r"logs"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern=r"logs"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern=r"logs"))
 async def _(givelogs):
     try:
         Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
@@ -193,7 +193,7 @@ async def _(givelogs):
             " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var !",
         )
     await eor(givelogs, "Downloading Logs..")
-    with open("logs-telebot.txt", "w") as log:
+    with open("logs-ryoishin.txt", "w") as log:
         log.write(app.get_log())
     ok = app.get_log()
     message = ok
@@ -202,14 +202,14 @@ async def _(givelogs):
     url = f"https://del.dog/{r['key']}"
     await givelogs.client.send_file(
         givelogs.chat_id,
-        "logs-telebot.txt",
+        "logs-ryoishin.txt",
         reply_to=givelogs.id,
         caption=f"**Heroku** Ryoishin Logs.\nPasted [here]({url}) too!",
     )
     await eor(givelogs, "Heroku Logs Incoming!!")
     await asyncio.sleep(5)
     await givelogs.delete()
-    return os.remove("logs-telebot.txt")
+    return os.remove("logs-ryoishin.txt")
 
 
 CMD_HELP.update(

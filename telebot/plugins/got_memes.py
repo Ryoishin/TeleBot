@@ -7,11 +7,11 @@
 import asyncio
 import random
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="gotm", outgoing=True))
-@telebot.on(sudo_cmd(pattern="gotm", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="gotm", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="gotm", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:

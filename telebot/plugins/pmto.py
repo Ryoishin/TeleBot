@@ -2,11 +2,11 @@
 # @its_xditya
 # Kangers keep credits
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="pmto ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="pmto ?(.*)"))
 async def pmto(event):
     a = event.pattern_match.group(1)
     b = a.split(" ")

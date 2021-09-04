@@ -5,12 +5,12 @@ from datetime import datetime
 
 import speedtest
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="speedtest ?(.*)"))
-@telebot.on(sudo_cmd(pattern="speedtest ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="speedtest ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="speedtest ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

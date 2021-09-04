@@ -5,13 +5,13 @@ DB Options: bots, commands, email, forward, url"""
 
 from telethon import events, functions, types
 
-from telebot import CMD_HELP
-from telebot.plugins.sql_helper.locks_sql import get_locks, is_locked, update_lock
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.plugins.sql_helper.locks_sql import get_locks, is_locked, update_lock
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern=r"lock( (?P<target>\S+)|$)"))
-@telebot.on(sudo_cmd(pattern=r"lock( (?P<target>\S+)|$)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"lock( (?P<target>\S+)|$)"))
+@ryoishin.on(sudo_cmd(pattern=r"lock( (?P<target>\S+)|$)", allow_sudo=True))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".lock"
@@ -87,8 +87,8 @@ async def _(event):
             )
 
 
-@telebot.on(admin_cmd(pattern="unlock ?(.*)"))
-@telebot.on(sudo_cmd(pattern="unlock ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="unlock ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="unlock ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -101,8 +101,8 @@ async def _(event):
         await eor(event, "Use `.lock` without any parameters to unlock API locks")
 
 
-@telebot.on(admin_cmd(pattern="currenabledlocks"))
-@telebot.on(sudo_cmd(pattern="currenabledlocks", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="currenabledlocks"))
+@ryoishin.on(sudo_cmd(pattern="currenabledlocks", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -137,8 +137,8 @@ async def _(event):
     await eor(event, res)
 
 
-@telebot.on(events.MessageEdited())  # pylint:disable=E0602
-@telebot.on(events.NewMessage())  # pylint:disable=E0602
+@ryoishin.on(events.MessageEdited())  # pylint:disable=E0602
+@ryoishin.on(events.NewMessage())  # pylint:disable=E0602
 async def check_incoming_messages(event):
     # TODO: exempt admins from locks
     peer_id = event.chat_id
@@ -200,7 +200,7 @@ async def check_incoming_messages(event):
                 update_lock(peer_id, "url", False)
 
 
-@telebot.on(events.ChatAction())  # pylint:disable=E0602
+@ryoishin.on(events.ChatAction())  # pylint:disable=E0602
 async def _(event):
     # TODO: exempt admins from locks
     # check for "lock" "bots"

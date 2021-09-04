@@ -2,11 +2,11 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="scan ?(.*)"))
-@telebot.on(sudo_cmd(pattern="scan ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="scan ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="scan ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

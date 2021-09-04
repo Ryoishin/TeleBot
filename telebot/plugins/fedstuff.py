@@ -18,13 +18,13 @@ import asyncio
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 bot = "@MissRose_bot"
 
 
-@telebot.on(admin_cmd(pattern="fstat ?(.*)"))
-@telebot.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="fstat ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -52,7 +52,7 @@ async def _(event):
                     await audio.click(0)
                     await asyncio.sleep(2)
                     audio = await conv.get_response()
-                    await telebot.send_file(
+                    await ryoishin.send_file(
                         event.chat_id,
                         audio,
                         caption=f"List of feds {user} has been banned in.\n\nCollected using Ryoishin.",
@@ -64,8 +64,8 @@ async def _(event):
                 await ok.edit("**Error**\n `Unblock` @MissRose_Bot `and try again!")
 
 
-@telebot.on(admin_cmd(pattern="fedinfo ?(.*)"))
-@telebot.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="fedinfo ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

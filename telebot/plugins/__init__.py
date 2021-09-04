@@ -16,9 +16,9 @@
 
 from telethon.tl.types import Channel
 
-from telebot import *
-from telebot import ALIVE_NAME, bot, telever
-from telebot.telebotConfig import Config, Var
+from ryoishin import *
+from ryoishin import ALIVE_NAME, bot, telever
+from ryoishin.ryoishinConfig import Config, Var
 
 # stats
 if Var.PRIVATE_GROUP_ID:

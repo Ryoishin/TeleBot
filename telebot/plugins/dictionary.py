@@ -4,11 +4,11 @@ Syntax: .meaning <word>"""
 import requests
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="meaning (.*)"))
-@telebot.on(sudo_cmd(pattern="meaning (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="meaning (.*)"))
+@ryoishin.on(sudo_cmd(pattern="meaning (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

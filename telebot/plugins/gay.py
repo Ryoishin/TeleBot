@@ -6,11 +6,11 @@
 
 import asyncio
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="(.*)"))
+@ryoishin.on(admin_cmd(pattern="(.*)"))
 async def _(event):
     if event.fwd_from:
         return

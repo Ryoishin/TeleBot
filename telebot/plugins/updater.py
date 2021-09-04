@@ -16,7 +16,7 @@ from os import environ, execle, path, remove
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
-from telebot import CMD_HNDLR
+from ryoishin import CMD_HNDLR
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
@@ -52,7 +52,7 @@ async def updateme_requirements():
         return repr(e)
 
 
-@telebot.on(admin_cmd(pattern="update ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="update ?(.*)"))
 async def upstream(ups):
     "For .update command, check if the bot is up to date, update if specified"
     await ups.edit("`Searching for new updates, if any...`")

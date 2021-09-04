@@ -18,16 +18,16 @@ from telegraph import Telegraph
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from telebot import CMD_HELP
-from telebot.telebotConfig import Var
-from telebot.utils import admin_cmd, sudo_cmd
+from ryoishin import CMD_HELP
+from ryoishin.ryoishinConfig import Var
+from ryoishin.utils import admin_cmd, sudo_cmd
 
 telegraph = Telegraph()
-mee = telegraph.create_account(short_name="telebot")
+mee = telegraph.create_account(short_name="ryoishin")
 
 
-@telebot.on(admin_cmd(pattern="purl ?(.*)"))
-@telebot.on(sudo_cmd(pattern="purl ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="purl ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="purl ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -54,8 +54,8 @@ async def _(event):
         )
 
 
-@telebot.on(admin_cmd(pattern="reader ?(.*)"))
-@telebot.on(sudo_cmd(pattern="reader ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="reader ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="reader ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -85,8 +85,8 @@ async def _(event):
         )
 
 
-@telebot.on(admin_cmd(pattern="aud ?(.*)"))
-@telebot.on(sudo_cmd(pattern="aud ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="aud ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="aud ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -117,8 +117,8 @@ async def _(event):
         await event.client.send_file(event.chat_id, response.message.media)
 
 
-@telebot.on(admin_cmd(pattern="instadl ?(.*)"))
-@telebot.on(sudo_cmd(pattern="instadl ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="instadl ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="instadl ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -145,8 +145,8 @@ async def _(event):
         )
 
 
-@telebot.on(admin_cmd(pattern="stats$"))
-@telebot.on(sudo_cmd(pattern="stats$", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="stats$"))
+@ryoishin.on(sudo_cmd(pattern="stats$", allow_sudo=True))
 async def stats(event):
     if event.fwd_from:
         return
@@ -159,8 +159,8 @@ async def stats(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="xogame$"))
-@telebot.on(sudo_cmd(pattern="xogame$", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="xogame$"))
+@ryoishin.on(sudo_cmd(pattern="xogame$", allow_sudo=True))
 async def gamez(event):
     if event.fwd_from:
         return
@@ -173,8 +173,8 @@ async def gamez(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="whisper ?(.*)"))
-@telebot.on(sudo_cmd(pattern="whisper ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="whisper ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="whisper ?(.*)", allow_sudo=True))
 async def wspr(event):
     if event.fwd_from:
         return
@@ -187,8 +187,8 @@ async def wspr(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="crack ?(.*)"))
-@telebot.on(sudo_cmd(pattern="crack ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="crack ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="crack ?(.*)", allow_sudo=True))
 async def mod(event):
     if event.fwd_from:
         return
@@ -201,8 +201,8 @@ async def mod(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="checkspam ?(.*)"))
-@telebot.on(sudo_cmd(pattern="checkspam ?(.*), allow_sudo=True"))
+@ryoishin.on(admin_cmd(pattern="checkspam ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="checkspam ?(.*), allow_sudo=True"))
 async def _(event):
     bot = "@SpamBot"
     if event.fwd_from:
@@ -222,8 +222,8 @@ async def _(event):
                 await eor(event, "**Error:** `unblock` @spambot `and retry!")
 
 
-@telebot.on(admin_cmd(pattern="gitdl ?(.*)"))
-@telebot.on(sudo_cmd(pattern="gitdl ?(.*), allow_sudo=True"))
+@ryoishin.on(admin_cmd(pattern="gitdl ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="gitdl ?(.*), allow_sudo=True"))
 async def _(event):
     if event.fwd_from:
         return
@@ -253,8 +253,8 @@ async def _(event):
         )
 
 
-@telebot.on(admin_cmd(pattern="imusic ?(.*)"))
-@telebot.on(sudo_cmd(pattern="imusic ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="imusic ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="imusic ?(.*)", allow_sudo=True))
 async def tel(event):
     if event.fwd_from:
         return
@@ -267,8 +267,8 @@ async def tel(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="font ?(.*)"))
-@telebot.on(sudo_cmd(pattern="font ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="font ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="font ?(.*)", allow_sudo=True))
 async def _(event):
     bot = "@fontsgenbot"
     if event.fwd_from:

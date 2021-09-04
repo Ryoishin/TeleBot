@@ -6,12 +6,12 @@
 #
 import os
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd, sudo_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd, sudo_cmd
 
 
-@telebot.on(admin_cmd(pattern=r"reveal", outgoing=True))
-@telebot.on(sudo_cmd(pattern=r"reveal"))
+@ryoishin.on(admin_cmd(pattern=r"reveal", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern=r"reveal"))
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
     a = open(b, "r")

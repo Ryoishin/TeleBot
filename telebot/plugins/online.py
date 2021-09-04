@@ -7,8 +7,8 @@ import sys
 
 from telethon import version
 
-from telebot import ALIVE_NAME
-from telebot.utils import admin_cmd
+from ryoishin import ALIVE_NAME
+from ryoishin.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Ryoishin User"
 
@@ -18,8 +18,8 @@ ONLINESTR = [
 ]
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="online"))
-@telebot.on(sudo_cmd(allow_sudo=True, pattern="online"))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="online"))
+@ryoishin.on(sudo_cmd(allow_sudo=True, pattern="online"))
 async def online(event):
     """ Greet everyone! """
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):

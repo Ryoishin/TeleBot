@@ -17,10 +17,10 @@ import asyncio
 
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="scha ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="scha ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

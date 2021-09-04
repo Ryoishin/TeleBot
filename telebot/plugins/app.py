@@ -7,11 +7,11 @@ Fetch App Details from Playstore.
 import bs4
 import requests
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="app (.*)"))
-@telebot.on(sudo_cmd(pattern="app (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="app (.*)"))
+@ryoishin.on(sudo_cmd(pattern="app (.*)", allow_sudo=True))
 async def apk(event):
     app_name = event.pattern_match.group(1)
     event = await edit_or_reply(event, "Finding your app!")

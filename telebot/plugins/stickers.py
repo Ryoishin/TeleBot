@@ -20,8 +20,8 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from telebot import CMD_HELP, bot
-from telebot.telebotConfig import Var
+from ryoishin import CMD_HELP, bot
+from ryoishin.ryoishinConfig import Var
 
 KANGING_STR = [
     "Using Witchery to kang this sticker...",
@@ -39,8 +39,8 @@ KANGING_STR = [
 telename = Var.CUSTOM_STICKER_PACK_NAME
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="kang"))
-@telebot.on(sudo_cmd(pattern="kang", allow_sudo=True))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="kang"))
+@ryoishin.on(sudo_cmd(pattern="kang", allow_sudo=True))
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
@@ -294,8 +294,8 @@ async def resize_photo(photo):
     return image
 
 
-@telebot.on(admin_cmd(outgoing=True, pattern="stkrinfo"))
-@telebot.on(sudo_cmd(pattern="stkrinfo", allow_sudo=True))
+@ryoishin.on(admin_cmd(outgoing=True, pattern="stkrinfo"))
+@ryoishin.on(sudo_cmd(pattern="stkrinfo", allow_sudo=True))
 # @register(outgoing=True, pattern="^.stkrinfo$")
 async def get_pack_info(event):
     if not event.is_reply:

@@ -7,13 +7,13 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@telebot.on(admin_cmd(pattern="time ?(.*)"))  # pylint:disable=E0602
-@telebot.on(sudo_cmd(pattern="time ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="time ?(.*)"))  # pylint:disable=E0602
+@ryoishin.on(sudo_cmd(pattern="time ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -54,8 +54,8 @@ async def _(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="gtime (.*)"))  # pylint:disable=E0602
-@telebot.on(sudo_cmd(pattern="gtime (.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="gtime (.*)"))  # pylint:disable=E0602
+@ryoishin.on(sudo_cmd(pattern="gtime (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

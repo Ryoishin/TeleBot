@@ -5,8 +5,8 @@ import asyncio
 from telethon.tl.types import InputMediaUploadedPhoto
 from uniborg.util import admin_cmd
 
-from telebot import CMD_HELP
-from telebot.plugins.sql_helper.ghdb_sql import (
+from ryoishin import CMD_HELP
+from ryoishin.plugins.sql_helper.ghdb_sql import (
     add_channel,
     get_all_channels,
     in_channels,
@@ -18,8 +18,8 @@ logs_id = Var.PRIVATE_GROUP_ID
 # Keep all credits pls, made with great effort by @HeisenbergTheDanger
 
 
-@telebot.on(admin_cmd(pattern="forward ?(.*)"))
-@telebot.on(sudo_cmd(pattern="forward ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="forward ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="forward ?(.*)", allow_sudo=True))
 async def forw(event):
     if event.fwd_from:
         return
@@ -68,8 +68,8 @@ async def forw(event):
             await mssg.edit("Set up log channel for checking errors.")
 
 
-@telebot.on(admin_cmd(pattern="broadcast ?(.*)"))
-@telebot.on(sudo_cmd(pattern="broadcast ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="broadcast ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="broadcast ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -186,7 +186,7 @@ async def _(event):
 # Written by @HeisenbergTheDanger
 
 
-@telebot.on(admin_cmd(pattern="add ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="add ?(.*)"))
 async def add_ch(event):
     if event.fwd_from:
         return
@@ -227,7 +227,7 @@ async def add_ch(event):
         await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="rm ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="rm ?(.*)"))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -255,8 +255,8 @@ async def remove_ch(event):
         await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="listchannels"))
-@telebot.on(sudo_cmd(pattern="listchannels", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="listchannels"))
+@ryoishin.on(sudo_cmd(pattern="listchannels", allow_sudo=True))
 async def list(event):
     if event.fwd_from:
         return
@@ -281,8 +281,8 @@ async def list(event):
         await eor(event, msg)
 
 
-@telebot.on(admin_cmd(pattern="search ?(.*)"))
-@telebot.on(sudo_cmd(pattern="search ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="search ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="search ?(.*)", allow_sudo=True))
 async def search(event):
     channel_id = event.pattern_match.group(1)
     try:

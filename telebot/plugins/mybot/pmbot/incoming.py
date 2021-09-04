@@ -15,10 +15,10 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Incoming message checker.
-from telebot.plugins.mybot.sql.users_sql import add_user_to_db
-from telebot.plugins.mybot.sql.blacklist_sql import check_is_black_list
+from ryoishin.plugins.mybot.sql.users_sql import add_user_to_db
+from ryoishin.plugins.mybot.sql.blacklist_sql import check_is_black_list
 from telethon import events
-from telebot.plugins import OWNER_ID
+from ryoishin.plugins import OWNER_ID
 
 # if incoming
 

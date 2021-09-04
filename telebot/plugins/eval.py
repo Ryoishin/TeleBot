@@ -4,10 +4,10 @@ import io
 import sys
 import traceback
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern="eval"))
+@ryoishin.on(admin_cmd(pattern="eval"))
 async def _(event):
     if event.fwd_from:
         return

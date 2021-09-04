@@ -9,12 +9,12 @@ from telethon.tl.types import (
 )
 from telethon.utils import pack_bot_file_id
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="get_ad?(m)in ?(.*)"))
-@telebot.on(sudo_cmd(pattern="get_ad?(m)in ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="get_ad?(m)in ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="get_ad?(m)in ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -67,8 +67,8 @@ async def _(event):
         await eor(event, mentions)
 
 
-@telebot.on(admin_cmd(pattern="get_id"))
-@telebot.on(sudo_cmd(pattern="get_id", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="get_id"))
+@ryoishin.on(sudo_cmd(pattern="get_id", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -94,8 +94,8 @@ async def _(event):
         await eor(event, "Current Chat ID: `{}`".format(str(event.chat_id)))
 
 
-@telebot.on(admin_cmd(pattern="get_bot ?(.*)"))
-@telebot.on(sudo_cmd(pattern="get_bot ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="get_bot ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="get_bot ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

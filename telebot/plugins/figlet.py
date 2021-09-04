@@ -1,11 +1,11 @@
 import pyfiglet
 
-from telebot import CMD_HELP
-from telebot.utils import admin_cmd
+from ryoishin import CMD_HELP
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="figlet ?(.*)", outgoing=True))
-@telebot.on(sudo_cmd(pattern="figlet ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="figlet ?(.*)", outgoing=True))
+@ryoishin.on(sudo_cmd(pattern="figlet ?(.*)", allow_sudo=True))
 async def figlet(event):
     if event.fwd_from:
         return

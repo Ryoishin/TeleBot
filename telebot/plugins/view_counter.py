@@ -1,11 +1,11 @@
 """Enable Seen Counter in any message to know how many users have seen your message
 Syntax: .fwd as reply to any message"""
 
-from telebot.utils import admin_cmd
+from ryoishin.utils import admin_cmd
 
 
-@telebot.on(admin_cmd(pattern="frwd"))
-@telebot.on(sudo_cmd(pattern="frwd", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="frwd"))
+@ryoishin.on(sudo_cmd(pattern="frwd", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

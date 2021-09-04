@@ -4,9 +4,9 @@
 import time
 from datetime import datetime
 
-from telebot import CMD_HELP
-from telebot.__init__ import StartTime
-from telebot.plugins import OWNER_ID, TELE_NAME
+from ryoishin import CMD_HELP
+from ryoishin.__init__ import StartTime
+from ryoishin.plugins import OWNER_ID, TELE_NAME
 
 
 def get_readable_time(seconds: int) -> str:
@@ -40,8 +40,8 @@ def get_readable_time(seconds: int) -> str:
 # @command(pattern="^.ping$")
 
 
-@telebot.on(admin_cmd(pattern="ping$"))
-@telebot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="ping$"))
+@ryoishin.on(sudo_cmd(pattern="ping$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

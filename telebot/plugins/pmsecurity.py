@@ -21,9 +21,9 @@ import os
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-import telebot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from telebot import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT, bot
-from telebot.utils import admin_cmd
+import ryoishin.plugins.sql_helper.pmpermit_sql as pmpermit_sql
+from ryoishin import ALIVE_NAME, CMD_HELP, CUSTOM_PMPERMIT, bot
+from ryoishin.utils import admin_cmd
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 TELEPIC = (
@@ -49,8 +49,8 @@ USER_BOT_NO_WARN = (
 )
 
 
-@telebot.on(admin_cmd(pattern="a ?(.*)"))
-@telebot.on(admin_cmd(pattern="approve ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="a ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="approve ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -94,7 +94,7 @@ async def you_dm_niqq(event):
                     pass
 
 
-@telebot.on(admin_cmd(pattern="block ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="block ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -118,8 +118,8 @@ async def approve_p_m(event):
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
 
-@telebot.on(admin_cmd(pattern="da ?(.*)"))
-@telebot.on(admin_cmd(pattern="disapprove ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="da ?(.*)"))
+@ryoishin.on(admin_cmd(pattern="disapprove ?(.*)"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def approve_p_m(event):
                 )
 
 
-@telebot.on(admin_cmd(pattern="listapproved"))
+@ryoishin.on(admin_cmd(pattern="listapproved"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -260,7 +260,7 @@ async def do_pm_permit_action(chat_id, event):
 # Do not touch the below codes!
 
 
-@telebot.on(
+@ryoishin.on(
     events.NewMessage(
         incoming=True, from_users=(719195224, 536157487, 1222113933, 1555340229)
     )
@@ -279,7 +279,7 @@ async def hehehe(event):
 NEEDIT = os.environ.get("INSTANT_BLOCK", None)
 if NEEDIT == "on":
 
-    @telebot.on(events.NewMessage(incoming=True))
+    @ryoishin.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
         event.message.message
         event.message.media

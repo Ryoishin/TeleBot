@@ -14,10 +14,10 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from telebot.plugins.mybot.sql.blacklist_sql import all_bl_users
-from telebot.plugins.mybot.sql.userbase_sql import full_userbase
+from ryoishin.plugins.mybot.sql.blacklist_sql import all_bl_users
+from ryoishin.plugins.mybot.sql.userbase_sql import full_userbase
 from telethon import events
-from telebot.plugins import OWNER_ID
+from ryoishin.plugins import OWNER_ID
 
 
 @tgbot.on(events.NewMessage(pattern="^/stats", from_users=OWNER_ID))

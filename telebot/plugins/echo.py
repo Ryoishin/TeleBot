@@ -18,11 +18,11 @@
 Echoes the message via your bot
 """
 
-from telebot import CMD_HELP
+from ryoishin import CMD_HELP
 
 
-@telebot.on(admin_cmd(pattern=r"echo (.*)"))
-@telebot.on(sudo_cmd(pattern=r"echo ( .*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern=r"echo (.*)"))
+@ryoishin.on(sudo_cmd(pattern=r"echo ( .*)", allow_sudo=True))
 async def _(event):
     bxt = Var.TG_BOT_USER_NAME_BF_HER
     try:

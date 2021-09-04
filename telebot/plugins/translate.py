@@ -8,11 +8,11 @@ Available Commands:
 import emoji
 from googletrans import Translator
 
-from telebot import CMD_HELP, CMD_HNDLR
+from ryoishin import CMD_HELP, CMD_HNDLR
 
 
-@telebot.on(admin_cmd(pattern="tr ?(.*)"))
-@telebot.on(sudo_cmd(pattern="tr ?(.*)", allow_sudo=True))
+@ryoishin.on(admin_cmd(pattern="tr ?(.*)"))
+@ryoishin.on(sudo_cmd(pattern="tr ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
