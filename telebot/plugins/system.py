@@ -61,7 +61,7 @@ async def bot_ver(event):
             revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
             await event.edit(
-                "`Telebot Version: " f"{verout}" "` \n" "`Revision: " f"{revout}" "`"
+                "`Ryoishin Version: " f"{verout}" "` \n" "`Revision: " f"{revout}" "`"
             )
         else:
             await event.edit(
