@@ -22,7 +22,7 @@ jobs:
 
         with:
 
-          find: "xdiyta"
+          find: "Xdiyta"
 
           replace: "TeamRyoishin"
 
