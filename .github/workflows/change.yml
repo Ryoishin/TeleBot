@@ -41,4 +41,4 @@ jobs:
           commit_user_name: Ryoishin
 
           commit_user_email: ryoishincoder@gmail.com
-          Author: Ryoishin <Ryoishin@users.noreply.github.com>
+          commit_author: Ryoishin <Ryoishin@users.noreply.github.com>
