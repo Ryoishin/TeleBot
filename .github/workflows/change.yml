@@ -22,7 +22,7 @@ jobs:
 
         with:
 
-          find: "Xditya"
+          find: "tele"
 
           replace: "TeamRyoishin"
 
